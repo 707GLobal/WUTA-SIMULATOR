@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from wuta_msgs/msg/Cone.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module wuta_msgs {
+  module msg {
+    module Cone_Constants {
+      const uint8 COLOR_UNKNOWN = 0;
+      const uint8 COLOR_BLUE = 1;
+      const uint8 COLOR_YELLOW = 2;
+      const uint8 COLOR_ORANGE = 3;
+    };
+    @verbatim (language="comment", text=
+      "Single cone detection" "\n"
+      "Color constants")
+    struct Cone {
+      @verbatim (language="comment", text=
+        "3D position in sensor/map frame")
+      geometry_msgs::msg::Point position;
+
+      @verbatim (language="comment", text=
+        "Cone color (see constants above)")
+      uint8 color;
+
+      @verbatim (language="comment", text=
+        "Detection confidence [0.0, 1.0]")
+      float confidence;
+    };
+  };
+};

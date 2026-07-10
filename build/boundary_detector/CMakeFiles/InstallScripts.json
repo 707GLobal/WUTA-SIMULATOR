@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/starry1n/WUTA/build/boundary_detector/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

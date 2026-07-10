@@ -1,0 +1,3 @@
+[console_scripts]
+simulation_bridge = simulator_bringup.simulation_bridge:main
+

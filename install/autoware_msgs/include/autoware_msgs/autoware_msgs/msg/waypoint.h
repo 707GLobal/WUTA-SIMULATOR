@@ -1,0 +1,1 @@
+/home/starry1n/WUTA/build/autoware_msgs/rosidl_generator_c/autoware_msgs/msg/waypoint.h

@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "wuta_msgs__py",
+		"source" : "/home/starry1n/WUTA/build/wuta_msgs/wuta_msgs__py"
+	}
+}

@@ -1,0 +1,3 @@
+[console_scripts]
+vehicle_model = vehicle_model.vehicle_model:main
+

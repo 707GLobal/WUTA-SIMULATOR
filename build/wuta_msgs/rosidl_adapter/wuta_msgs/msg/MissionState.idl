@@ -1,0 +1,59 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from wuta_msgs/msg/MissionState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module wuta_msgs {
+  module msg {
+    module MissionState_Constants {
+      @verbatim (language="comment", text=
+        "System initializing")
+      const uint8 IDLE = 0;
+      @verbatim (language="comment", text=
+        "All sensors online, waiting for start")
+      const uint8 READY = 1;
+      @verbatim (language="comment", text=
+        "Vehicle inspection: sensor check + VCU CAN test")
+      const uint8 INSPECTION = 2;
+      @verbatim (language="comment", text=
+        "First lap: KISS-ICP + building cone map")
+      const uint8 EXPLORE = 3;
+      @verbatim (language="comment", text=
+        "Map complete, switching to race mode")
+      const uint8 MAPPING_DONE = 4;
+      @verbatim (language="comment", text=
+        "High-speed: NDT map matching")
+      const uint8 RACE = 5;
+      @verbatim (language="comment", text=
+        "Mission complete")
+      const uint8 FINISH = 6;
+      @verbatim (language="comment", text=
+        "E-stop / fault")
+      const uint8 EMERGENCY = 7;
+      @verbatim (language="comment", text=
+        "Mission mode constants (which event)")
+      const uint8 MISSION_TRACKDRIVE = 0;
+      const uint8 MISSION_SKIDPAD = 1;
+      const uint8 MISSION_ACCELERATION = 2;
+      @verbatim (language="comment", text=
+        "Localization mode constants")
+      const uint8 LOC_KISS_ICP = 0;
+      const uint8 LOC_NDT = 1;
+    };
+    @verbatim (language="comment", text=
+      "Mission and system state for Mission Manager" "\n"
+      "State constants")
+    struct MissionState {
+      std_msgs::msg::Header header;
+
+      uint8 state;
+
+      uint8 mission_mode;
+
+      uint8 localization_mode;
+
+      string description;
+    };
+  };
+};

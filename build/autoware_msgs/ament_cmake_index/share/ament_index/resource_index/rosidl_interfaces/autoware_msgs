@@ -1,0 +1,6 @@
+msg/Command.idl
+msg/Command.msg
+msg/Lane.idl
+msg/Lane.msg
+msg/Waypoint.idl
+msg/Waypoint.msg

@@ -1,0 +1,17 @@
+[1.618s] Invoking command in '/home/starry1n/WUTA/build/vehicle_model': CMAKE_PREFIX_PATH=/home/starry1n/WUTA/install/autoware_msgs:/home/starry1n/WUTA/install/wuta_msgs LD_LIBRARY_PATH=/home/starry1n/WUTA/install/autoware_msgs/lib:/home/starry1n/WUTA/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/starry1n/WUTA/build/vehicle_model/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/starry1n/WUTA/install/vehicle_model/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/starry1n/WUTA/build/vehicle_model/build --no-deps symlink_data
+[2.067s] running develop
+[2.326s] running egg_info
+[2.327s] writing vehicle_model.egg-info/PKG-INFO
+[2.327s] writing dependency_links to vehicle_model.egg-info/dependency_links.txt
+[2.328s] writing entry points to vehicle_model.egg-info/entry_points.txt
+[2.328s] writing requirements to vehicle_model.egg-info/requires.txt
+[2.329s] writing top-level names to vehicle_model.egg-info/top_level.txt
+[2.332s] reading manifest file 'vehicle_model.egg-info/SOURCES.txt'
+[2.333s] writing manifest file 'vehicle_model.egg-info/SOURCES.txt'
+[2.336s] running build_ext
+[2.336s] Creating /home/starry1n/WUTA/install/vehicle_model/lib/python3.10/site-packages/vehicle-model.egg-link (link to .)
+[2.339s] Installing vehicle_model script to /home/starry1n/WUTA/install/vehicle_model/lib/vehicle_model
+[2.340s] 
+[2.341s] Installed /home/starry1n/WUTA/build/vehicle_model
+[2.341s] running symlink_data
+[30.029s] Invoked command in '/home/starry1n/WUTA/build/vehicle_model' returned '0': CMAKE_PREFIX_PATH=/home/starry1n/WUTA/install/autoware_msgs:/home/starry1n/WUTA/install/wuta_msgs LD_LIBRARY_PATH=/home/starry1n/WUTA/install/autoware_msgs/lib:/home/starry1n/WUTA/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/starry1n/WUTA/build/vehicle_model/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/starry1n/WUTA/install/vehicle_model/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/starry1n/WUTA/build/vehicle_model/build --no-deps symlink_data

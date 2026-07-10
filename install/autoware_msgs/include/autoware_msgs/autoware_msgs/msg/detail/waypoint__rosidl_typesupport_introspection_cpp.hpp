@@ -1,0 +1,1 @@
+/home/starry1n/WUTA/build/autoware_msgs/rosidl_typesupport_introspection_cpp/autoware_msgs/msg/detail/waypoint__rosidl_typesupport_introspection_cpp.hpp

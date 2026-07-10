@@ -1,0 +1,1 @@
+/home/starry1n/WUTA/build/autoware_msgs/ament_cmake_core/autoware_msgsConfig-version.cmake

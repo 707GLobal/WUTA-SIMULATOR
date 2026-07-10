@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from wuta_msgs/msg/ConeMap.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+#include "wuta_msgs/msg/Cone.idl"
+
+module wuta_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Global cone map in map frame, organized by color")
+    struct ConeMap {
+      @verbatim (language="comment", text=
+        "frame_id: \"map\"")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Left boundary (blue)")
+      sequence<wuta_msgs::msg::Cone> blue_cones;
+
+      @verbatim (language="comment", text=
+        "Right boundary (yellow)")
+      sequence<wuta_msgs::msg::Cone> yellow_cones;
+
+      @verbatim (language="comment", text=
+        "Start/finish line")
+      sequence<wuta_msgs::msg::Cone> orange_cones;
+
+      @verbatim (language="comment", text=
+        "Unclassified")
+      sequence<wuta_msgs::msg::Cone> unknown_cones;
+
+      @verbatim (language="comment", text=
+        "True when track loop is closed")
+      boolean is_closed;
+    };
+  };
+};

@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/starry1n/WUTA/build/autoware_msgs/cmake_install.cmake",
+		"/home/starry1n/WUTA/build/autoware_msgs/autoware_msgs__py/cmake_install.cmake",
+		"/home/starry1n/WUTA/build/autoware_msgs/autoware_msgs__rs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

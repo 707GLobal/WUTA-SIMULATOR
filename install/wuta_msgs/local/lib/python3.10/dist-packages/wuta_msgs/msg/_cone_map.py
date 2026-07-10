@@ -1,0 +1,1 @@
+/home/starry1n/WUTA/build/wuta_msgs/rosidl_generator_py/wuta_msgs/msg/_cone_map.py
