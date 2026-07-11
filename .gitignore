@@ -1,0 +1,42 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.idea/
+.vscode/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.tox/
+.venv/
+venv/
+*.egg-info/
+
+# ROS 2 / colcon output (generated; never commit these directories)
+**/build/
+**/install/
+**/log/
+**/.ros/
+**/ros2_ws/build/
+**/ros2_ws/install/
+**/ros2_ws/log/
+
+# Runtime and generated data
+*.bag
+*.db3
+*.prof
+*.pyc
+*.so
+*.o
+*.a
+
+# Local simulator output
+WUTA-SIM/**/*.yaml.bak
+WUTA-SIM/**/wuta_cone_map.yaml
