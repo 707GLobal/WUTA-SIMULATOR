@@ -1,0 +1,676 @@
+[0.000000] (-) TimerEvent: {}
+[0.000179] (-) JobUnselected: {'identifier': 'autoware_msgs'}
+[0.000244] (-) JobUnselected: {'identifier': 'boundary_detector'}
+[0.000267] (-) JobUnselected: {'identifier': 'camera_detection'}
+[0.000393] (-) JobUnselected: {'identifier': 'controller'}
+[0.000935] (-) JobUnselected: {'identifier': 'detection_fusion'}
+[0.001028] (-) JobUnselected: {'identifier': 'kiss_icp'}
+[0.001049] (-) JobUnselected: {'identifier': 'kiss_icp_wrapper'}
+[0.001064] (-) JobUnselected: {'identifier': 'lidar_detection'}
+[0.001078] (-) JobUnselected: {'identifier': 'localization_manager'}
+[0.001095] (-) JobUnselected: {'identifier': 'mission_manager'}
+[0.001108] (-) JobUnselected: {'identifier': 'ndt_localization'}
+[0.001120] (-) JobUnselected: {'identifier': 'path_generator'}
+[0.001134] (-) JobUnselected: {'identifier': 'robot_localization'}
+[0.001147] (-) JobUnselected: {'identifier': 'wuta_msgs'}
+[0.001159] (-) JobUnselected: {'identifier': 'wuta_tools'}
+[0.001176] (cone_map_builder) JobQueued: {'identifier': 'cone_map_builder', 'dependencies': OrderedDict([('wuta_msgs', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs')])}
+[0.001776] (cone_map_builder) JobStarted: {'identifier': 'cone_map_builder'}
+[0.099510] (-) TimerEvent: {}
+[0.200284] (-) TimerEvent: {}
+[0.300795] (-) TimerEvent: {}
+[0.401266] (-) TimerEvent: {}
+[0.501646] (-) TimerEvent: {}
+[0.602236] (-) TimerEvent: {}
+[0.702830] (-) TimerEvent: {}
+[0.803676] (-) TimerEvent: {}
+[0.904617] (-) TimerEvent: {}
+[1.005306] (-) TimerEvent: {}
+[1.105873] (-) TimerEvent: {}
+[1.206573] (-) TimerEvent: {}
+[1.307124] (-) TimerEvent: {}
+[1.407469] (-) TimerEvent: {}
+[1.507874] (-) TimerEvent: {}
+[1.608488] (-) TimerEvent: {}
+[1.709045] (-) TimerEvent: {}
+[1.809509] (-) TimerEvent: {}
+[1.909948] (-) TimerEvent: {}
+[2.010219] (-) TimerEvent: {}
+[2.110785] (-) TimerEvent: {}
+[2.211390] (-) TimerEvent: {}
+[2.311732] (-) TimerEvent: {}
+[2.412300] (-) TimerEvent: {}
+[2.512903] (-) TimerEvent: {}
+[2.613870] (-) TimerEvent: {}
+[2.714650] (-) TimerEvent: {}
+[2.815664] (-) TimerEvent: {}
+[2.916746] (-) TimerEvent: {}
+[3.017046] (-) TimerEvent: {}
+[3.117660] (-) TimerEvent: {}
+[3.218538] (-) TimerEvent: {}
+[3.319175] (-) TimerEvent: {}
+[3.419867] (-) TimerEvent: {}
+[3.520335] (-) TimerEvent: {}
+[3.620831] (-) TimerEvent: {}
+[3.721093] (-) TimerEvent: {}
+[3.821749] (-) TimerEvent: {}
+[3.922288] (-) TimerEvent: {}
+[4.022746] (-) TimerEvent: {}
+[4.123227] (-) TimerEvent: {}
+[4.223835] (-) TimerEvent: {}
+[4.324297] (-) TimerEvent: {}
+[4.425033] (-) TimerEvent: {}
+[4.525770] (-) TimerEvent: {}
+[4.626547] (-) TimerEvent: {}
+[4.727349] (-) TimerEvent: {}
+[4.828185] (-) TimerEvent: {}
+[4.928597] (-) TimerEvent: {}
+[5.028950] (-) TimerEvent: {}
+[5.129471] (-) TimerEvent: {}
+[5.230989] (-) TimerEvent: {}
+[5.331514] (-) TimerEvent: {}
+[5.432488] (-) TimerEvent: {}
+[5.533396] (-) TimerEvent: {}
+[5.634144] (-) TimerEvent: {}
+[5.734882] (-) TimerEvent: {}
+[5.835462] (-) TimerEvent: {}
+[5.935954] (-) TimerEvent: {}
+[6.036283] (-) TimerEvent: {}
+[6.137258] (-) TimerEvent: {}
+[6.237679] (-) TimerEvent: {}
+[6.338094] (-) TimerEvent: {}
+[6.438700] (-) TimerEvent: {}
+[6.539216] (-) TimerEvent: {}
+[6.639750] (-) TimerEvent: {}
+[6.740265] (-) TimerEvent: {}
+[6.840904] (-) TimerEvent: {}
+[6.941260] (-) TimerEvent: {}
+[7.041830] (-) TimerEvent: {}
+[7.142263] (-) TimerEvent: {}
+[7.242884] (-) TimerEvent: {}
+[7.343854] (-) TimerEvent: {}
+[7.444307] (-) TimerEvent: {}
+[7.544822] (-) TimerEvent: {}
+[7.645291] (-) TimerEvent: {}
+[7.745876] (-) TimerEvent: {}
+[7.846254] (-) TimerEvent: {}
+[7.946733] (-) TimerEvent: {}
+[8.047189] (-) TimerEvent: {}
+[8.147761] (-) TimerEvent: {}
+[8.248205] (-) TimerEvent: {}
+[8.349417] (-) TimerEvent: {}
+[8.450831] (-) TimerEvent: {}
+[8.552241] (-) TimerEvent: {}
+[8.654655] (-) TimerEvent: {}
+[8.755072] (-) TimerEvent: {}
+[8.855505] (-) TimerEvent: {}
+[8.956213] (-) TimerEvent: {}
+[9.056622] (-) TimerEvent: {}
+[9.157044] (-) TimerEvent: {}
+[9.257441] (-) TimerEvent: {}
+[9.357890] (-) TimerEvent: {}
+[9.458329] (-) TimerEvent: {}
+[9.558757] (-) TimerEvent: {}
+[9.659193] (-) TimerEvent: {}
+[9.759659] (-) TimerEvent: {}
+[9.860153] (-) TimerEvent: {}
+[9.960560] (-) TimerEvent: {}
+[10.061092] (-) TimerEvent: {}
+[10.161608] (-) TimerEvent: {}
+[10.262069] (-) TimerEvent: {}
+[10.362547] (-) TimerEvent: {}
+[10.462887] (-) TimerEvent: {}
+[10.563425] (-) TimerEvent: {}
+[10.664017] (-) TimerEvent: {}
+[10.764596] (-) TimerEvent: {}
+[10.865222] (-) TimerEvent: {}
+[10.965581] (-) TimerEvent: {}
+[11.066236] (-) TimerEvent: {}
+[11.166945] (-) TimerEvent: {}
+[11.267562] (-) TimerEvent: {}
+[11.368321] (-) TimerEvent: {}
+[11.468740] (-) TimerEvent: {}
+[11.569639] (-) TimerEvent: {}
+[11.670607] (-) TimerEvent: {}
+[11.771147] (-) TimerEvent: {}
+[11.871769] (-) TimerEvent: {}
+[11.972181] (-) TimerEvent: {}
+[12.072600] (-) TimerEvent: {}
+[12.173090] (-) TimerEvent: {}
+[12.273591] (-) TimerEvent: {}
+[12.373989] (-) TimerEvent: {}
+[12.474274] (-) TimerEvent: {}
+[12.574633] (-) TimerEvent: {}
+[12.675175] (-) TimerEvent: {}
+[12.776079] (-) TimerEvent: {}
+[12.876624] (-) TimerEvent: {}
+[12.977181] (-) TimerEvent: {}
+[13.077607] (-) TimerEvent: {}
+[13.178266] (-) TimerEvent: {}
+[13.278790] (-) TimerEvent: {}
+[13.379396] (-) TimerEvent: {}
+[13.479925] (-) TimerEvent: {}
+[13.580429] (-) TimerEvent: {}
+[13.680992] (-) TimerEvent: {}
+[13.782026] (-) TimerEvent: {}
+[13.882862] (-) TimerEvent: {}
+[13.983367] (-) TimerEvent: {}
+[14.084340] (-) TimerEvent: {}
+[14.185073] (-) TimerEvent: {}
+[14.285467] (-) TimerEvent: {}
+[14.386431] (-) TimerEvent: {}
+[14.486740] (-) TimerEvent: {}
+[14.587175] (-) TimerEvent: {}
+[14.687480] (-) TimerEvent: {}
+[14.787854] (-) TimerEvent: {}
+[14.888355] (-) TimerEvent: {}
+[14.988824] (-) TimerEvent: {}
+[15.089224] (-) TimerEvent: {}
+[15.189995] (-) TimerEvent: {}
+[15.290431] (-) TimerEvent: {}
+[15.390947] (-) TimerEvent: {}
+[15.491430] (-) TimerEvent: {}
+[15.591845] (-) TimerEvent: {}
+[15.692337] (-) TimerEvent: {}
+[15.792969] (-) TimerEvent: {}
+[15.893458] (-) TimerEvent: {}
+[15.994163] (-) TimerEvent: {}
+[16.095021] (-) TimerEvent: {}
+[16.195872] (-) TimerEvent: {}
+[16.296606] (-) TimerEvent: {}
+[16.397349] (-) TimerEvent: {}
+[16.497901] (-) TimerEvent: {}
+[16.598390] (-) TimerEvent: {}
+[16.698729] (-) TimerEvent: {}
+[16.799011] (-) TimerEvent: {}
+[16.899586] (-) TimerEvent: {}
+[17.022985] (-) TimerEvent: {}
+[17.123539] (-) TimerEvent: {}
+[17.224182] (-) TimerEvent: {}
+[17.324700] (-) TimerEvent: {}
+[17.425116] (-) TimerEvent: {}
+[17.525624] (-) TimerEvent: {}
+[17.626160] (-) TimerEvent: {}
+[17.726656] (-) TimerEvent: {}
+[17.827149] (-) TimerEvent: {}
+[17.927611] (-) TimerEvent: {}
+[18.028214] (-) TimerEvent: {}
+[18.128582] (-) TimerEvent: {}
+[18.228956] (-) TimerEvent: {}
+[18.329379] (-) TimerEvent: {}
+[18.429841] (-) TimerEvent: {}
+[18.530223] (-) TimerEvent: {}
+[18.630805] (-) TimerEvent: {}
+[18.731136] (-) TimerEvent: {}
+[18.831610] (-) TimerEvent: {}
+[18.932033] (-) TimerEvent: {}
+[19.032520] (-) TimerEvent: {}
+[19.133228] (-) TimerEvent: {}
+[19.233754] (-) TimerEvent: {}
+[19.334099] (-) TimerEvent: {}
+[19.434900] (-) TimerEvent: {}
+[19.535421] (-) TimerEvent: {}
+[19.635855] (-) TimerEvent: {}
+[19.736296] (-) TimerEvent: {}
+[19.836777] (-) TimerEvent: {}
+[19.938219] (-) TimerEvent: {}
+[20.039317] (-) TimerEvent: {}
+[20.140247] (-) TimerEvent: {}
+[20.240929] (-) TimerEvent: {}
+[20.341274] (-) TimerEvent: {}
+[20.441910] (-) TimerEvent: {}
+[20.542421] (-) TimerEvent: {}
+[20.642860] (-) TimerEvent: {}
+[20.743249] (-) TimerEvent: {}
+[20.843600] (-) TimerEvent: {}
+[20.944090] (-) TimerEvent: {}
+[21.044444] (-) TimerEvent: {}
+[21.144862] (-) TimerEvent: {}
+[21.245620] (-) TimerEvent: {}
+[21.346129] (-) TimerEvent: {}
+[21.446742] (-) TimerEvent: {}
+[21.547271] (-) TimerEvent: {}
+[21.647757] (-) TimerEvent: {}
+[21.748212] (-) TimerEvent: {}
+[21.848982] (-) TimerEvent: {}
+[21.949470] (-) TimerEvent: {}
+[22.050080] (-) TimerEvent: {}
+[22.150450] (-) TimerEvent: {}
+[22.251431] (-) TimerEvent: {}
+[22.351841] (-) TimerEvent: {}
+[22.452304] (-) TimerEvent: {}
+[22.552987] (-) TimerEvent: {}
+[22.653951] (-) TimerEvent: {}
+[22.754394] (-) TimerEvent: {}
+[22.854843] (-) TimerEvent: {}
+[22.955510] (-) TimerEvent: {}
+[23.056218] (-) TimerEvent: {}
+[23.156689] (-) TimerEvent: {}
+[23.257049] (-) TimerEvent: {}
+[23.357603] (-) TimerEvent: {}
+[23.458319] (-) TimerEvent: {}
+[23.558996] (-) TimerEvent: {}
+[23.659766] (-) TimerEvent: {}
+[23.760637] (-) TimerEvent: {}
+[23.861192] (-) TimerEvent: {}
+[23.961657] (-) TimerEvent: {}
+[24.062129] (-) TimerEvent: {}
+[24.163293] (-) TimerEvent: {}
+[24.263855] (-) TimerEvent: {}
+[24.364604] (-) TimerEvent: {}
+[24.465157] (-) TimerEvent: {}
+[24.565773] (-) TimerEvent: {}
+[24.666327] (-) TimerEvent: {}
+[24.766912] (-) TimerEvent: {}
+[24.867565] (-) TimerEvent: {}
+[24.968231] (-) TimerEvent: {}
+[25.068727] (-) TimerEvent: {}
+[25.169133] (-) TimerEvent: {}
+[25.269920] (-) TimerEvent: {}
+[25.370474] (-) TimerEvent: {}
+[25.471006] (-) TimerEvent: {}
+[25.572078] (-) TimerEvent: {}
+[25.672829] (-) TimerEvent: {}
+[25.773302] (-) TimerEvent: {}
+[25.873988] (-) TimerEvent: {}
+[25.974563] (-) TimerEvent: {}
+[26.074981] (-) TimerEvent: {}
+[26.175467] (-) TimerEvent: {}
+[26.276178] (-) TimerEvent: {}
+[26.376725] (-) TimerEvent: {}
+[26.477593] (-) TimerEvent: {}
+[26.578090] (-) TimerEvent: {}
+[26.678888] (-) TimerEvent: {}
+[26.779420] (-) TimerEvent: {}
+[26.880230] (-) TimerEvent: {}
+[26.980884] (-) TimerEvent: {}
+[27.081983] (-) TimerEvent: {}
+[27.183942] (-) TimerEvent: {}
+[27.284660] (-) TimerEvent: {}
+[27.385448] (-) TimerEvent: {}
+[27.485913] (-) TimerEvent: {}
+[27.586583] (-) TimerEvent: {}
+[27.687447] (-) TimerEvent: {}
+[27.788037] (-) TimerEvent: {}
+[27.888498] (-) TimerEvent: {}
+[27.989157] (-) TimerEvent: {}
+[28.089918] (-) TimerEvent: {}
+[28.190585] (-) TimerEvent: {}
+[28.291408] (-) TimerEvent: {}
+[28.392159] (-) TimerEvent: {}
+[28.492788] (-) TimerEvent: {}
+[28.593311] (-) TimerEvent: {}
+[28.693803] (-) TimerEvent: {}
+[28.794611] (-) TimerEvent: {}
+[28.895423] (-) TimerEvent: {}
+[28.996449] (-) TimerEvent: {}
+[29.097064] (-) TimerEvent: {}
+[29.197497] (-) TimerEvent: {}
+[29.298032] (-) TimerEvent: {}
+[29.398503] (-) TimerEvent: {}
+[29.498946] (-) TimerEvent: {}
+[29.599325] (-) TimerEvent: {}
+[29.699778] (-) TimerEvent: {}
+[29.800517] (-) TimerEvent: {}
+[29.901040] (-) TimerEvent: {}
+[30.001446] (-) TimerEvent: {}
+[30.014214] (cone_map_builder) JobProgress: {'identifier': 'cone_map_builder', 'progress': 'cmake'}
+[30.018152] (cone_map_builder) Command: {'cmd': ['/usr/bin/cmake', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/mapping/cone_map_builder', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder'], 'cwd': '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'starry1n'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/starry1n'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2321'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('COLORTERM', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'starry1n'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'starry1n'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/starry1n/.local/bin:/home/starry1n/.codex/packages/standalone/releases/0.144.1-x86_64-unknown-linux-musl/codex-path:/home/starry1n/.codex/tmp/arg0/codex-arg0awJCOR:/home/starry1n/.local/bin:/opt/ros/humble/bin:/home/starry1n/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/starry1n-virtual-machine:@/tmp/.ICE-unix/2321,unix/starry1n-virtual-machine:/tmp/.ICE-unix/2321'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e33e2d55_6c4c_49ab_b93a_cdc5293aedab'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H6FRS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f4fce-0951-7790-ba26-10d4a12e7034'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble')]), 'shell': False}
+[30.050611] (cone_map_builder) StderrLine: {'line': b'CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[30.051065] (cone_map_builder) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[30.051142] (cone_map_builder) StderrLine: {'line': b'  CMake.\n'}
+[30.051200] (cone_map_builder) StderrLine: {'line': b'\n'}
+[30.051254] (cone_map_builder) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[30.051305] (cone_map_builder) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[30.051353] (cone_map_builder) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[30.051400] (cone_map_builder) StderrLine: {'line': b'\n'}
+[30.051456] (cone_map_builder) StderrLine: {'line': b'\n'}
+[30.068370] (cone_map_builder) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[30.101790] (-) TimerEvent: {}
+[30.202370] (-) TimerEvent: {}
+[30.303003] (-) TimerEvent: {}
+[30.374119] (cone_map_builder) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[30.392345] (cone_map_builder) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[30.403239] (-) TimerEvent: {}
+[30.464970] (cone_map_builder) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[30.470384] (cone_map_builder) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[30.485693] (cone_map_builder) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[30.503439] (-) TimerEvent: {}
+[30.503866] (cone_map_builder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[30.525523] (cone_map_builder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[30.589614] (cone_map_builder) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[30.591999] (cone_map_builder) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[30.603716] (-) TimerEvent: {}
+[30.703960] (-) TimerEvent: {}
+[30.708202] (cone_map_builder) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[30.757837] (cone_map_builder) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[30.769509] (cone_map_builder) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[30.804085] (-) TimerEvent: {}
+[30.808434] (cone_map_builder) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[30.882055] (cone_map_builder) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[30.884525] (cone_map_builder) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[30.885417] (cone_map_builder) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[30.886848] (cone_map_builder) StdoutLine: {'line': b'-- Found wuta_msgs: 1.0.0 (/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/share/wuta_msgs/cmake)\n'}
+[30.904297] (-) TimerEvent: {}
+[30.943478] (cone_map_builder) StdoutLine: {'line': b'-- Configuring done (0.9s)\n'}
+[30.961559] (cone_map_builder) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[30.984771] (cone_map_builder) StdoutLine: {'line': b'-- Build files have been written to: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder\n'}
+[31.004432] (-) TimerEvent: {}
+[31.104918] (-) TimerEvent: {}
+[31.205485] (-) TimerEvent: {}
+[31.306103] (-) TimerEvent: {}
+[31.406427] (-) TimerEvent: {}
+[31.506795] (-) TimerEvent: {}
+[31.607295] (-) TimerEvent: {}
+[31.707585] (-) TimerEvent: {}
+[31.808009] (-) TimerEvent: {}
+[31.908255] (-) TimerEvent: {}
+[32.008619] (-) TimerEvent: {}
+[32.109259] (-) TimerEvent: {}
+[32.209644] (-) TimerEvent: {}
+[32.310069] (-) TimerEvent: {}
+[32.410313] (-) TimerEvent: {}
+[32.510617] (-) TimerEvent: {}
+[32.611003] (-) TimerEvent: {}
+[32.711350] (-) TimerEvent: {}
+[32.811651] (-) TimerEvent: {}
+[32.911978] (-) TimerEvent: {}
+[33.012335] (-) TimerEvent: {}
+[33.112957] (-) TimerEvent: {}
+[33.213566] (-) TimerEvent: {}
+[33.314144] (-) TimerEvent: {}
+[33.414680] (-) TimerEvent: {}
+[33.515019] (-) TimerEvent: {}
+[33.615383] (-) TimerEvent: {}
+[33.715756] (-) TimerEvent: {}
+[33.816030] (-) TimerEvent: {}
+[33.916283] (-) TimerEvent: {}
+[34.016722] (-) TimerEvent: {}
+[34.117209] (-) TimerEvent: {}
+[34.217537] (-) TimerEvent: {}
+[34.317883] (-) TimerEvent: {}
+[34.418515] (-) TimerEvent: {}
+[34.518841] (-) TimerEvent: {}
+[34.619111] (-) TimerEvent: {}
+[34.719439] (-) TimerEvent: {}
+[34.819738] (-) TimerEvent: {}
+[34.920080] (-) TimerEvent: {}
+[35.020418] (-) TimerEvent: {}
+[35.120812] (-) TimerEvent: {}
+[35.221214] (-) TimerEvent: {}
+[35.321644] (-) TimerEvent: {}
+[35.421986] (-) TimerEvent: {}
+[35.522295] (-) TimerEvent: {}
+[35.622884] (-) TimerEvent: {}
+[35.723265] (-) TimerEvent: {}
+[35.823550] (-) TimerEvent: {}
+[35.924120] (-) TimerEvent: {}
+[36.024646] (-) TimerEvent: {}
+[36.125326] (-) TimerEvent: {}
+[36.225618] (-) TimerEvent: {}
+[36.326060] (-) TimerEvent: {}
+[36.426419] (-) TimerEvent: {}
+[36.526914] (-) TimerEvent: {}
+[36.627349] (-) TimerEvent: {}
+[36.727761] (-) TimerEvent: {}
+[36.828220] (-) TimerEvent: {}
+[36.928497] (-) TimerEvent: {}
+[37.028876] (-) TimerEvent: {}
+[37.129239] (-) TimerEvent: {}
+[37.229765] (-) TimerEvent: {}
+[37.330287] (-) TimerEvent: {}
+[37.430560] (-) TimerEvent: {}
+[37.530790] (-) TimerEvent: {}
+[37.631136] (-) TimerEvent: {}
+[37.731577] (-) TimerEvent: {}
+[37.832186] (-) TimerEvent: {}
+[37.932560] (-) TimerEvent: {}
+[38.032917] (-) TimerEvent: {}
+[38.133175] (-) TimerEvent: {}
+[38.233415] (-) TimerEvent: {}
+[38.333696] (-) TimerEvent: {}
+[38.434131] (-) TimerEvent: {}
+[38.534528] (-) TimerEvent: {}
+[38.634812] (-) TimerEvent: {}
+[38.735124] (-) TimerEvent: {}
+[38.835772] (-) TimerEvent: {}
+[38.936031] (-) TimerEvent: {}
+[39.036330] (-) TimerEvent: {}
+[39.136788] (-) TimerEvent: {}
+[39.237237] (-) TimerEvent: {}
+[39.337581] (-) TimerEvent: {}
+[39.437918] (-) TimerEvent: {}
+[39.538519] (-) TimerEvent: {}
+[39.639005] (-) TimerEvent: {}
+[39.739404] (-) TimerEvent: {}
+[39.839743] (-) TimerEvent: {}
+[39.940145] (-) TimerEvent: {}
+[40.040521] (-) TimerEvent: {}
+[40.140939] (-) TimerEvent: {}
+[40.241433] (-) TimerEvent: {}
+[40.341768] (-) TimerEvent: {}
+[40.442019] (-) TimerEvent: {}
+[40.542405] (-) TimerEvent: {}
+[40.642869] (-) TimerEvent: {}
+[40.743286] (-) TimerEvent: {}
+[40.843902] (-) TimerEvent: {}
+[40.944312] (-) TimerEvent: {}
+[41.044637] (-) TimerEvent: {}
+[41.144995] (-) TimerEvent: {}
+[41.245338] (-) TimerEvent: {}
+[41.345765] (-) TimerEvent: {}
+[41.446093] (-) TimerEvent: {}
+[41.546381] (-) TimerEvent: {}
+[41.646962] (-) TimerEvent: {}
+[41.747548] (-) TimerEvent: {}
+[41.847907] (-) TimerEvent: {}
+[41.948300] (-) TimerEvent: {}
+[42.048886] (-) TimerEvent: {}
+[42.149262] (-) TimerEvent: {}
+[42.249558] (-) TimerEvent: {}
+[42.349985] (-) TimerEvent: {}
+[42.450348] (-) TimerEvent: {}
+[42.550834] (-) TimerEvent: {}
+[42.651393] (-) TimerEvent: {}
+[42.751807] (-) TimerEvent: {}
+[42.852349] (-) TimerEvent: {}
+[42.952784] (-) TimerEvent: {}
+[43.053060] (-) TimerEvent: {}
+[43.153408] (-) TimerEvent: {}
+[43.253874] (-) TimerEvent: {}
+[43.354422] (-) TimerEvent: {}
+[43.455117] (-) TimerEvent: {}
+[43.555531] (-) TimerEvent: {}
+[43.655983] (-) TimerEvent: {}
+[43.756528] (-) TimerEvent: {}
+[43.856956] (-) TimerEvent: {}
+[43.957328] (-) TimerEvent: {}
+[44.057610] (-) TimerEvent: {}
+[44.158116] (-) TimerEvent: {}
+[44.258580] (-) TimerEvent: {}
+[44.359012] (-) TimerEvent: {}
+[44.459443] (-) TimerEvent: {}
+[44.559830] (-) TimerEvent: {}
+[44.660350] (-) TimerEvent: {}
+[44.760659] (-) TimerEvent: {}
+[44.861008] (-) TimerEvent: {}
+[44.961257] (-) TimerEvent: {}
+[45.061829] (-) TimerEvent: {}
+[45.162393] (-) TimerEvent: {}
+[45.262744] (-) TimerEvent: {}
+[45.363251] (-) TimerEvent: {}
+[45.463584] (-) TimerEvent: {}
+[45.563904] (-) TimerEvent: {}
+[45.664279] (-) TimerEvent: {}
+[45.764562] (-) TimerEvent: {}
+[45.864845] (-) TimerEvent: {}
+[45.965224] (-) TimerEvent: {}
+[46.065668] (-) TimerEvent: {}
+[46.166114] (-) TimerEvent: {}
+[46.266589] (-) TimerEvent: {}
+[46.366861] (-) TimerEvent: {}
+[46.467114] (-) TimerEvent: {}
+[46.567401] (-) TimerEvent: {}
+[46.667717] (-) TimerEvent: {}
+[46.768160] (-) TimerEvent: {}
+[46.868668] (-) TimerEvent: {}
+[46.969230] (-) TimerEvent: {}
+[47.069657] (-) TimerEvent: {}
+[47.169996] (-) TimerEvent: {}
+[47.270420] (-) TimerEvent: {}
+[47.370712] (-) TimerEvent: {}
+[47.471136] (-) TimerEvent: {}
+[47.571474] (-) TimerEvent: {}
+[47.671762] (-) TimerEvent: {}
+[47.772089] (-) TimerEvent: {}
+[47.872425] (-) TimerEvent: {}
+[47.972847] (-) TimerEvent: {}
+[48.073646] (-) TimerEvent: {}
+[48.174184] (-) TimerEvent: {}
+[48.274423] (-) TimerEvent: {}
+[48.374967] (-) TimerEvent: {}
+[48.475494] (-) TimerEvent: {}
+[48.575808] (-) TimerEvent: {}
+[48.676307] (-) TimerEvent: {}
+[48.776926] (-) TimerEvent: {}
+[48.877481] (-) TimerEvent: {}
+[48.977948] (-) TimerEvent: {}
+[49.078239] (-) TimerEvent: {}
+[49.178532] (-) TimerEvent: {}
+[49.279019] (-) TimerEvent: {}
+[49.379326] (-) TimerEvent: {}
+[49.479598] (-) TimerEvent: {}
+[49.579989] (-) TimerEvent: {}
+[49.680483] (-) TimerEvent: {}
+[49.780995] (-) TimerEvent: {}
+[49.881454] (-) TimerEvent: {}
+[49.981741] (-) TimerEvent: {}
+[50.082107] (-) TimerEvent: {}
+[50.183005] (-) TimerEvent: {}
+[50.283440] (-) TimerEvent: {}
+[50.383989] (-) TimerEvent: {}
+[50.484429] (-) TimerEvent: {}
+[50.585142] (-) TimerEvent: {}
+[50.685526] (-) TimerEvent: {}
+[50.785923] (-) TimerEvent: {}
+[50.886372] (-) TimerEvent: {}
+[50.986620] (-) TimerEvent: {}
+[51.087078] (-) TimerEvent: {}
+[51.187505] (-) TimerEvent: {}
+[51.287960] (-) TimerEvent: {}
+[51.388285] (-) TimerEvent: {}
+[51.488889] (-) TimerEvent: {}
+[51.589261] (-) TimerEvent: {}
+[51.689684] (-) TimerEvent: {}
+[51.790062] (-) TimerEvent: {}
+[51.890363] (-) TimerEvent: {}
+[51.990627] (-) TimerEvent: {}
+[52.091137] (-) TimerEvent: {}
+[52.191658] (-) TimerEvent: {}
+[52.292165] (-) TimerEvent: {}
+[52.392516] (-) TimerEvent: {}
+[52.492830] (-) TimerEvent: {}
+[52.593074] (-) TimerEvent: {}
+[52.693423] (-) TimerEvent: {}
+[52.793808] (-) TimerEvent: {}
+[52.894095] (-) TimerEvent: {}
+[52.994427] (-) TimerEvent: {}
+[53.094742] (-) TimerEvent: {}
+[53.195169] (-) TimerEvent: {}
+[53.295702] (-) TimerEvent: {}
+[53.396182] (-) TimerEvent: {}
+[53.496548] (-) TimerEvent: {}
+[53.596826] (-) TimerEvent: {}
+[53.697308] (-) TimerEvent: {}
+[53.797571] (-) TimerEvent: {}
+[53.897849] (-) TimerEvent: {}
+[53.998287] (-) TimerEvent: {}
+[54.098674] (-) TimerEvent: {}
+[54.199065] (-) TimerEvent: {}
+[54.299426] (-) TimerEvent: {}
+[54.399934] (-) TimerEvent: {}
+[54.500265] (-) TimerEvent: {}
+[54.600703] (-) TimerEvent: {}
+[54.701208] (-) TimerEvent: {}
+[54.801804] (-) TimerEvent: {}
+[54.902412] (-) TimerEvent: {}
+[55.002928] (-) TimerEvent: {}
+[55.103327] (-) TimerEvent: {}
+[55.203690] (-) TimerEvent: {}
+[55.304285] (-) TimerEvent: {}
+[55.404942] (-) TimerEvent: {}
+[55.505387] (-) TimerEvent: {}
+[55.605627] (-) TimerEvent: {}
+[55.705978] (-) TimerEvent: {}
+[55.806954] (-) TimerEvent: {}
+[55.907422] (-) TimerEvent: {}
+[56.007880] (-) TimerEvent: {}
+[56.108299] (-) TimerEvent: {}
+[56.208656] (-) TimerEvent: {}
+[56.309027] (-) TimerEvent: {}
+[56.409309] (-) TimerEvent: {}
+[56.509615] (-) TimerEvent: {}
+[56.610112] (-) TimerEvent: {}
+[56.710663] (-) TimerEvent: {}
+[56.811202] (-) TimerEvent: {}
+[56.911576] (-) TimerEvent: {}
+[57.012213] (-) TimerEvent: {}
+[57.112898] (-) TimerEvent: {}
+[57.213322] (-) TimerEvent: {}
+[57.313763] (-) TimerEvent: {}
+[57.414341] (-) TimerEvent: {}
+[57.514721] (-) TimerEvent: {}
+[57.615315] (-) TimerEvent: {}
+[57.715735] (-) TimerEvent: {}
+[57.816029] (-) TimerEvent: {}
+[57.916478] (-) TimerEvent: {}
+[58.016722] (-) TimerEvent: {}
+[58.117239] (-) TimerEvent: {}
+[58.217660] (-) TimerEvent: {}
+[58.318258] (-) TimerEvent: {}
+[58.418827] (-) TimerEvent: {}
+[58.519374] (-) TimerEvent: {}
+[58.619884] (-) TimerEvent: {}
+[58.720541] (-) TimerEvent: {}
+[58.821073] (-) TimerEvent: {}
+[58.921404] (-) TimerEvent: {}
+[59.021814] (-) TimerEvent: {}
+[59.122426] (-) TimerEvent: {}
+[59.222781] (-) TimerEvent: {}
+[59.323072] (-) TimerEvent: {}
+[59.423383] (-) TimerEvent: {}
+[59.523854] (-) TimerEvent: {}
+[59.624190] (-) TimerEvent: {}
+[59.724531] (-) TimerEvent: {}
+[59.824821] (-) TimerEvent: {}
+[59.925178] (-) TimerEvent: {}
+[60.018358] (cone_map_builder) CommandEnded: {'returncode': 0}
+[60.018763] (cone_map_builder) JobProgress: {'identifier': 'cone_map_builder', 'progress': 'build'}
+[60.020407] (cone_map_builder) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', '--', '-j8', '-l8'], 'cwd': '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'starry1n'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/starry1n'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2321'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('COLORTERM', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'starry1n'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'starry1n'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/starry1n/.local/bin:/home/starry1n/.codex/packages/standalone/releases/0.144.1-x86_64-unknown-linux-musl/codex-path:/home/starry1n/.codex/tmp/arg0/codex-arg0awJCOR:/home/starry1n/.local/bin:/opt/ros/humble/bin:/home/starry1n/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/starry1n-virtual-machine:@/tmp/.ICE-unix/2321,unix/starry1n-virtual-machine:/tmp/.ICE-unix/2321'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e33e2d55_6c4c_49ab_b93a_cdc5293aedab'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H6FRS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f4fce-0951-7790-ba26-10d4a12e7034'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble')]), 'shell': False}
+[60.025287] (-) TimerEvent: {}
+[60.077312] (cone_map_builder) StdoutLine: {'line': b'[100%] Built target cone_map_builder_node\n'}
+[60.085764] (cone_map_builder) CommandEnded: {'returncode': 0}
+[60.087142] (cone_map_builder) JobProgress: {'identifier': 'cone_map_builder', 'progress': 'install'}
+[60.094180] (cone_map_builder) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'], 'cwd': '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'starry1n'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/starry1n'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2321'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('COLORTERM', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'starry1n'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'starry1n'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/starry1n/.local/bin:/home/starry1n/.codex/packages/standalone/releases/0.144.1-x86_64-unknown-linux-musl/codex-path:/home/starry1n/.codex/tmp/arg0/codex-arg0awJCOR:/home/starry1n/.local/bin:/opt/ros/humble/bin:/home/starry1n/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/starry1n-virtual-machine:@/tmp/.ICE-unix/2321,unix/starry1n-virtual-machine:/tmp/.ICE-unix/2321'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e33e2d55_6c4c_49ab_b93a_cdc5293aedab'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H6FRS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f4fce-0951-7790-ba26-10d4a12e7034'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble')]), 'shell': False}
+[60.099594] (cone_map_builder) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[60.100053] (cone_map_builder) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[60.100136] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/lib/cone_map_builder/cone_map_builder_node\n'}
+[60.100179] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/config/cone_map_builder.yaml\n'}
+[60.100481] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/package_run_dependencies/cone_map_builder\n'}
+[60.100592] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/parent_prefix_path/cone_map_builder\n'}
+[60.100651] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/ament_prefix_path.sh\n'}
+[60.100704] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/ament_prefix_path.dsv\n'}
+[60.100899] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/path.sh\n'}
+[60.100954] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/path.dsv\n'}
+[60.100989] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.bash\n'}
+[60.101027] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.sh\n'}
+[60.101052] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.zsh\n'}
+[60.101074] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.dsv\n'}
+[60.101095] (cone_map_builder) StdoutLine: {'line': b'-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/package.dsv\n'}
+[60.107636] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/packages/cone_map_builder\n'}
+[60.107927] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/cmake/cone_map_builderConfig.cmake\n'}
+[60.107981] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/cmake/cone_map_builderConfig-version.cmake\n'}
+[60.108011] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/package.xml\n'}
+[60.109248] (cone_map_builder) CommandEnded: {'returncode': 0}
+[60.121875] (cone_map_builder) JobEnded: {'identifier': 'cone_map_builder', 'rc': 0}
+[60.122467] (-) EventReactorShutdown: {}

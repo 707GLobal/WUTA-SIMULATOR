@@ -1,4 +1,0 @@
-source;share/wuta_msgs/local_setup.bash
-source;share/wuta_msgs/local_setup.dsv
-source;share/wuta_msgs/local_setup.sh
-source;share/wuta_msgs/local_setup.zsh

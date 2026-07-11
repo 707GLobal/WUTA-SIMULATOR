@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/wuta_msgs/rosidl_generator_cpp/wuta_msgs/msg/detail/cone_array__type_support.hpp

@@ -1,6 +1,0 @@
-setup.py
-wuta_msgs/__init__.py
-wuta_msgs.egg-info/PKG-INFO
-wuta_msgs.egg-info/SOURCES.txt
-wuta_msgs.egg-info/dependency_links.txt
-wuta_msgs.egg-info/top_level.txt

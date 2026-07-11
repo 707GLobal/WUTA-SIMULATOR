@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/autoware_msgs/rosidl_generator_c/autoware_msgs/msg/detail/command__type_support.h

@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/autoware_msgs/rosidl_typesupport_fastrtps_cpp/autoware_msgs/msg/detail/command__rosidl_typesupport_fastrtps_cpp.hpp

@@ -1,9 +1,0 @@
-{
-  "package_name": "wuta_msgs",
-  "non_idl_tuples": [
-    "/home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/common/wuta_msgs:msg/Cone.msg",
-    "/home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/common/wuta_msgs:msg/ConeArray.msg",
-    "/home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/common/wuta_msgs:msg/ConeMap.msg",
-    "/home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/common/wuta_msgs:msg/MissionState.msg"
-  ]
-}

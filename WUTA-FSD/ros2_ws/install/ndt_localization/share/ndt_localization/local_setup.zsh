@@ -1,0 +1,1 @@
+/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization/ament_cmake_environment_hooks/local_setup.zsh

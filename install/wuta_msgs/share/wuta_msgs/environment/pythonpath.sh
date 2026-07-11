@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/wuta_msgs/ament_cmake_environment_hooks/pythonpath.sh

@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/wuta_msgs/rosidl_typesupport_fastrtps_c/wuta_msgs/msg/detail/cone_array__rosidl_typesupport_fastrtps_c.h

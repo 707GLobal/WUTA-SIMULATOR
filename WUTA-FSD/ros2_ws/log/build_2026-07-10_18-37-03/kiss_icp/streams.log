@@ -1,0 +1,221 @@
+[0.024s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/ros -DCMAKE_MODULE_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/cmake -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/kiss_icp
+[0.287s] -- The CXX compiler identification is GNU 11.4.0
+[0.302s] -- Detecting CXX compiler ABI info
+[0.405s] -- Detecting CXX compiler ABI info - done
+[0.416s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.416s] -- Detecting CXX compile features
+[0.417s] -- Detecting CXX compile features - done
+[0.436s] [0mCMake Deprecation Warning at /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/cpp/kiss_icp/3rdparty/find_dependencies.cmake:25 (cmake_policy):
+[0.436s]   The OLD behavior for policy CMP0135 will be removed from a future version
+[0.436s]   of CMake.
+[0.436s] 
+[0.436s]   The cmake-policies(7) manual explains that the OLD behaviors of all
+[0.436s]   policies are deprecated and that a policy should be set to OLD only under
+[0.436s]   specific short-term circumstances.  Projects should be ported to the NEW
+[0.436s]   behavior and not rely on setting a policy to OLD.
+[0.436s] Call Stack (most recent call first):
+[0.436s]   /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/cpp/kiss_icp/CMakeLists.txt:48 (include)
+[0.436s] 
+[0.436s] [0m
+[20.197s] -- Configuring incomplete, errors occurred!
+[20.202s] [0m[ 11%] Creating directories for 'sophus-populate'
+[20.202s] [ 22%] Performing download step (download, verify and extract) for 'sophus-populate'
+[20.202s] -- Downloading...
+[20.202s]    dst='/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/1.24.6.tar.gz'
+[20.202s]    timeout='none'
+[20.202s]    inactivity timeout='none'
+[20.202s] -- Using src='https://github.com/strasdat/Sophus/archive/refs/tags/1.24.6.tar.gz'
+[20.202s] CMake Error at sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/download-sophus-populate.cmake:163 (message):
+[20.202s]   Each download failed!
+[20.202s] 
+[20.202s]     error: downloading 'https://github.com/strasdat/Sophus/archive/refs/tags/1.24.6.tar.gz' failed
+[20.202s]           status_code: 56
+[20.203s]           status_string: "Failure when receiving data from the peer"
+[20.203s]           log:
+[20.203s]           --- LOG BEGIN ---
+[20.203s]             Trying 20.205.243.166:443...
+[20.203s] 
+[20.203s]   Connected to github.com (20.205.243.166) port 443 (#0)
+[20.203s] 
+[20.203s]   ALPN, offering h2
+[20.203s] 
+[20.203s]   ALPN, offering http/1.1
+[20.203s] 
+[20.203s]    CAfile: /etc/ssl/certs/ca-certificates.crt
+[20.203s]    CApath: /etc/ssl/certs
+[20.203s] 
+[20.203s]   TLSv1.0 (OUT), TLS header, Certificate Status (22):
+[20.203s] 
+[20.203s]   [5 bytes data]
+[20.203s] 
+[20.203s]   TLSv1.3 (OUT), TLS handshake, Client hello (1):
+[20.203s] 
+[20.203s]   [512 bytes data]
+[20.203s] 
+[20.204s]   TLSv1.2 (IN), TLS header, Certificate Status (22):
+[20.204s] 
+[20.204s]   [5 bytes data]
+[20.207s] 
+[20.207s]   TLSv1.3 (IN), TLS handshake, Server hello (2):
+[20.207s] 
+[20.207s]   [122 bytes data]
+[20.207s] 
+[20.207s]   TLSv1.2 (IN), TLS header, Finished (20):
+[20.207s] 
+[20.207s]   [5 bytes data]
+[20.207s] 
+[20.207s]   TLSv1.2 (IN), TLS header, Supplemental data (23):
+[20.207s] 
+[20.207s]   [5 bytes data]
+[20.207s] 
+[20.207s]   [1 bytes data]
+[20.207s] 
+[20.207s]   TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+[20.207s] 
+[20.207s]   [19 bytes data]
+[20.207s] 
+[20.207s]   TLSv1.2 (IN), TLS header, Supplemental data (23):
+[20.208s] 
+[20.208s]   [5 bytes data]
+[20.208s] 
+[20.208s]   [1 bytes data]
+[20.208s] 
+[20.208s]   TLSv1.3 (IN), TLS handshake, Certificate (11):
+[20.208s] 
+[20.208s]   [2742 bytes data]
+[20.208s] 
+[20.208s]   TLSv1.2 (IN), TLS header, Supplemental data (23):
+[20.208s] 
+[20.208s]   [5 bytes data]
+[20.208s] 
+[20.208s]   [1 bytes data]
+[20.208s] 
+[20.208s]   TLSv1.3 (IN), TLS handshake, CERT verify (15):
+[20.208s] 
+[20.208s]   [78 bytes data]
+[20.208s] 
+[20.209s]   TLSv1.2 (IN), TLS header, Supplemental data (23):
+[20.209s] 
+[20.209s]   [5 bytes data]
+[20.209s] 
+[20.209s]   [1 bytes data]
+[20.209s] 
+[20.209s]   TLSv1.3 (IN), TLS handshake, Finished (20):
+[20.209s] 
+[20.209s]   [36 bytes data]
+[20.209s] 
+[20.209s]   TLSv1.2 (OUT), TLS header, Finished (20):
+[20.209s] 
+[20.209s]   [5 bytes data]
+[20.209s] 
+[20.209s]   TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+[20.209s] 
+[20.209s]   [1 bytes data]
+[20.209s] 
+[20.209s]   TLSv1.2 (OUT), TLS header, Supplemental data (23):
+[20.209s] 
+[20.209s]   [5 bytes data]
+[20.209s] 
+[20.217s]   [1 bytes data]
+[20.218s] 
+[20.218s]   TLSv1.3 (OUT), TLS handshake, Finished (20):
+[20.218s] 
+[20.218s]   [36 bytes data]
+[20.218s] 
+[20.218s]   SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+[20.218s] 
+[20.218s]   ALPN, server accepted to use h2
+[20.218s] 
+[20.218s]   Server certificate:
+[20.218s] 
+[20.218s]    subject: CN=github.com
+[20.218s]    start date: Jul  3 00:00:00 2026 GMT
+[20.218s]    expire date: Sep 30 23:59:59 2026 GMT
+[20.218s]    subjectAltName: host "github.com" matched cert's "github.com"
+[20.218s]    issuer: C=GB; O=Sectigo Limited; CN=Sectigo Public Server Authentication CA DV E36
+[20.219s]    SSL certificate verify ok.
+[20.219s] 
+[20.219s]   Using HTTP2, server supports multiplexing
+[20.219s] 
+[20.219s]   Connection state changed (HTTP/2 confirmed)
+[20.219s] 
+[20.219s]   Copying HTTP/2 data in stream buffer to connection buffer after upgrade:
+[20.219s]   len=0
+[20.219s] 
+[20.219s]   TLSv1.2 (OUT), TLS header, Supplemental data (23):
+[20.219s] 
+[20.219s]   [5 bytes data]
+[20.219s] 
+[20.219s]   [1 bytes data]
+[20.219s] 
+[20.219s]   TLSv1.2 (OUT), TLS header, Supplemental data (23):
+[20.219s] 
+[20.219s]   [5 bytes data]
+[20.219s] 
+[20.219s]   [1 bytes data]
+[20.219s] 
+[20.220s]   TLSv1.2 (OUT), TLS header, Supplemental data (23):
+[20.220s] 
+[20.220s]   [5 bytes data]
+[20.220s] 
+[20.220s]   [1 bytes data]
+[20.220s] 
+[20.220s]   Using Stream ID: 1 (easy handle 0x59d3de9af090)
+[20.220s] 
+[20.220s]   TLSv1.2 (OUT), TLS header, Supplemental data (23):
+[20.220s] 
+[20.220s]   [5 bytes data]
+[20.220s] 
+[20.220s]   [1 bytes data]
+[20.220s] 
+[20.220s]   GET /strasdat/Sophus/archive/refs/tags/1.24.6.tar.gz HTTP/2
+[20.224s] 
+[20.224s]   Host: github.com
+[20.224s] 
+[20.224s]   user-agent: curl/7.81.0
+[20.224s] 
+[20.224s]   accept: */*
+[20.224s] 
+[20.224s]   
+[20.224s] 
+[20.224s]   OpenSSL SSL_read: Connection reset by peer, errno 104
+[20.224s] 
+[20.224s]   Failed receiving HTTP2 data
+[20.224s] 
+[20.225s]   TLSv1.2 (OUT), TLS header, Supplemental data (23):
+[20.225s] 
+[20.225s]   [5 bytes data]
+[20.225s] 
+[20.225s]   [1 bytes data]
+[20.225s] 
+[20.225s]   OpenSSL SSL_write: Broken pipe, errno 32
+[20.225s] 
+[20.225s]   Failed sending HTTP2 data
+[20.225s] 
+[20.225s]   Connection #0 to host github.com left intact
+[20.225s] 
+[20.225s] 
+[20.225s] 
+[20.225s]           --- LOG END ---
+[20.225s]           
+[20.225s]     
+[20.225s] 
+[20.225s] 
+[20.225s] gmake[2]: *** [CMakeFiles/sophus-populate.dir/build.make:100：sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-download] 错误 1
+[20.225s] gmake[1]: *** [CMakeFiles/Makefile2:87：CMakeFiles/sophus-populate.dir/all] 错误 2
+[20.225s] gmake: *** [Makefile:91：all] 错误 2
+[20.225s] [0m
+[20.225s] [31mCMake Error at /usr/share/cmake-4.3/Modules/FetchContent.cmake:1931 (message):
+[20.226s]   Build step for sophus failed: 2
+[20.226s] Call Stack (most recent call first):
+[20.226s]   /usr/share/cmake-4.3/Modules/FetchContent.cmake:1622 (__FetchContent_populateSubbuild)
+[20.226s]   /usr/share/cmake-4.3/Modules/FetchContent.cmake:2158:EVAL:2 (__FetchContent_doPopulation)
+[20.226s]   /usr/share/cmake-4.3/Modules/FetchContent.cmake:2158 (cmake_language)
+[20.226s]   /usr/share/cmake-4.3/Modules/FetchContent.cmake:2399 (__FetchContent_Populate)
+[20.226s]   /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/cpp/kiss_icp/3rdparty/sophus/sophus.cmake:29 (FetchContent_MakeAvailable)
+[20.226s]   /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/cpp/kiss_icp/3rdparty/find_dependencies.cmake:36 (include)
+[20.226s]   /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/cpp/kiss_icp/3rdparty/find_dependencies.cmake:41 (find_external_dependency)
+[20.226s]   /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/cpp/kiss_icp/CMakeLists.txt:48 (include)
+[20.226s] 
+[20.226s] [0m
+[20.234s] Invoked command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/kiss_icp' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/kiss-icp/ros -DCMAKE_MODULE_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/cmake -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/kiss_icp

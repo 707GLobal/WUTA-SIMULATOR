@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/autoware_msgs/rosidl_generator_rs/autoware_msgs/rust/src/msg/rmw.rs

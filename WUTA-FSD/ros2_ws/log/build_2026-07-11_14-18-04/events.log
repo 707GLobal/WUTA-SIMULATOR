@@ -1,0 +1,346 @@
+[0.000000] (-) TimerEvent: {}
+[0.000053] (-) JobUnselected: {'identifier': 'autoware_msgs'}
+[0.000069] (-) JobUnselected: {'identifier': 'boundary_detector'}
+[0.000079] (-) JobUnselected: {'identifier': 'camera_detection'}
+[0.000087] (-) JobUnselected: {'identifier': 'controller'}
+[0.000095] (-) JobUnselected: {'identifier': 'detection_fusion'}
+[0.000102] (-) JobUnselected: {'identifier': 'kiss_icp'}
+[0.000110] (-) JobUnselected: {'identifier': 'kiss_icp_wrapper'}
+[0.000117] (-) JobUnselected: {'identifier': 'lidar_detection'}
+[0.000124] (-) JobUnselected: {'identifier': 'localization_manager'}
+[0.000153] (-) JobUnselected: {'identifier': 'mission_manager'}
+[0.000172] (-) JobUnselected: {'identifier': 'ndt_localization'}
+[0.000207] (-) JobUnselected: {'identifier': 'path_generator'}
+[0.000219] (-) JobUnselected: {'identifier': 'robot_localization'}
+[0.000227] (-) JobUnselected: {'identifier': 'wuta_msgs'}
+[0.000233] (-) JobUnselected: {'identifier': 'wuta_tools'}
+[0.000241] (cone_map_builder) JobQueued: {'identifier': 'cone_map_builder', 'dependencies': OrderedDict([('wuta_msgs', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs')])}
+[0.000255] (cone_map_builder) JobStarted: {'identifier': 'cone_map_builder'}
+[0.008885] (cone_map_builder) JobProgress: {'identifier': 'cone_map_builder', 'progress': 'cmake'}
+[0.009244] (cone_map_builder) JobProgress: {'identifier': 'cone_map_builder', 'progress': 'build'}
+[0.010517] (cone_map_builder) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', '--', '-j8', '-l8'], 'cwd': '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'starry1n'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/starry1n'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2321'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('COLORTERM', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'starry1n'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'starry1n'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/starry1n/.local/bin:/home/starry1n/.codex/packages/standalone/releases/0.144.1-x86_64-unknown-linux-musl/codex-path:/home/starry1n/.codex/tmp/arg0/codex-arg0awJCOR:/home/starry1n/.local/bin:/opt/ros/humble/bin:/home/starry1n/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/starry1n-virtual-machine:@/tmp/.ICE-unix/2321,unix/starry1n-virtual-machine:/tmp/.ICE-unix/2321'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e33e2d55_6c4c_49ab_b93a_cdc5293aedab'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H6FRS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f4fce-0951-7790-ba26-10d4a12e7034'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble')]), 'shell': False}
+[0.055938] (cone_map_builder) StdoutLine: {'line': b'[100%] Built target cone_map_builder_node\n'}
+[0.064208] (cone_map_builder) CommandEnded: {'returncode': 0}
+[0.065446] (cone_map_builder) JobProgress: {'identifier': 'cone_map_builder', 'progress': 'install'}
+[0.071594] (cone_map_builder) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'], 'cwd': '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'starry1n'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/starry1n'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2321'), ('IM_CONFIG_CHECK_ENV', '1'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('COLORTERM', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'starry1n'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'starry1n'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/starry1n/.local/bin:/home/starry1n/.codex/packages/standalone/releases/0.144.1-x86_64-unknown-linux-musl/codex-path:/home/starry1n/.codex/tmp/arg0/codex-arg0awJCOR:/home/starry1n/.local/bin:/opt/ros/humble/bin:/home/starry1n/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/starry1n-virtual-machine:@/tmp/.ICE-unix/2321,unix/starry1n-virtual-machine:/tmp/.ICE-unix/2321'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e33e2d55_6c4c_49ab_b93a_cdc5293aedab'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H6FRS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019f4fce-0951-7790-ba26-10d4a12e7034'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c67e2489f73595b365ff0ae46a50c8ee'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble')]), 'shell': False}
+[0.077332] (cone_map_builder) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.077706] (cone_map_builder) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.077796] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/lib/cone_map_builder/cone_map_builder_node\n'}
+[0.078136] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/config/cone_map_builder.yaml\n'}
+[0.078501] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/package_run_dependencies/cone_map_builder\n'}
+[0.078882] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/parent_prefix_path/cone_map_builder\n'}
+[0.078957] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/ament_prefix_path.sh\n'}
+[0.079144] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/ament_prefix_path.dsv\n'}
+[0.079216] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/path.sh\n'}
+[0.079254] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/path.dsv\n'}
+[0.079284] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.bash\n'}
+[0.079314] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.sh\n'}
+[0.079361] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.zsh\n'}
+[0.079422] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.dsv\n'}
+[0.079475] (cone_map_builder) StdoutLine: {'line': b'-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/package.dsv\n'}
+[0.085901] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/packages/cone_map_builder\n'}
+[0.086673] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/cmake/cone_map_builderConfig.cmake\n'}
+[0.086730] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/cmake/cone_map_builderConfig-version.cmake\n'}
+[0.086849] (cone_map_builder) StdoutLine: {'line': b'-- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/package.xml\n'}
+[0.099092] (-) TimerEvent: {}
+[0.199408] (-) TimerEvent: {}
+[0.299773] (-) TimerEvent: {}
+[0.400232] (-) TimerEvent: {}
+[0.500855] (-) TimerEvent: {}
+[0.601178] (-) TimerEvent: {}
+[0.701698] (-) TimerEvent: {}
+[0.802028] (-) TimerEvent: {}
+[0.902568] (-) TimerEvent: {}
+[1.002866] (-) TimerEvent: {}
+[1.103352] (-) TimerEvent: {}
+[1.204070] (-) TimerEvent: {}
+[1.304556] (-) TimerEvent: {}
+[1.405064] (-) TimerEvent: {}
+[1.505459] (-) TimerEvent: {}
+[1.605928] (-) TimerEvent: {}
+[1.706328] (-) TimerEvent: {}
+[1.806785] (-) TimerEvent: {}
+[1.907155] (-) TimerEvent: {}
+[2.007438] (-) TimerEvent: {}
+[2.107888] (-) TimerEvent: {}
+[2.208222] (-) TimerEvent: {}
+[2.308605] (-) TimerEvent: {}
+[2.408983] (-) TimerEvent: {}
+[2.509323] (-) TimerEvent: {}
+[2.609775] (-) TimerEvent: {}
+[2.710073] (-) TimerEvent: {}
+[2.810684] (-) TimerEvent: {}
+[2.911103] (-) TimerEvent: {}
+[3.012057] (-) TimerEvent: {}
+[3.112592] (-) TimerEvent: {}
+[3.212960] (-) TimerEvent: {}
+[3.313524] (-) TimerEvent: {}
+[3.413956] (-) TimerEvent: {}
+[3.514613] (-) TimerEvent: {}
+[3.615067] (-) TimerEvent: {}
+[3.715311] (-) TimerEvent: {}
+[3.815571] (-) TimerEvent: {}
+[3.915978] (-) TimerEvent: {}
+[4.016284] (-) TimerEvent: {}
+[4.116710] (-) TimerEvent: {}
+[4.216954] (-) TimerEvent: {}
+[4.317238] (-) TimerEvent: {}
+[4.417788] (-) TimerEvent: {}
+[4.518290] (-) TimerEvent: {}
+[4.618704] (-) TimerEvent: {}
+[4.719037] (-) TimerEvent: {}
+[4.819496] (-) TimerEvent: {}
+[4.919896] (-) TimerEvent: {}
+[5.020270] (-) TimerEvent: {}
+[5.120636] (-) TimerEvent: {}
+[5.221152] (-) TimerEvent: {}
+[5.321606] (-) TimerEvent: {}
+[5.422008] (-) TimerEvent: {}
+[5.522319] (-) TimerEvent: {}
+[5.622868] (-) TimerEvent: {}
+[5.723528] (-) TimerEvent: {}
+[5.824089] (-) TimerEvent: {}
+[5.924462] (-) TimerEvent: {}
+[6.024832] (-) TimerEvent: {}
+[6.125112] (-) TimerEvent: {}
+[6.225476] (-) TimerEvent: {}
+[6.325965] (-) TimerEvent: {}
+[6.426482] (-) TimerEvent: {}
+[6.527044] (-) TimerEvent: {}
+[6.627532] (-) TimerEvent: {}
+[6.727939] (-) TimerEvent: {}
+[6.828297] (-) TimerEvent: {}
+[6.928661] (-) TimerEvent: {}
+[7.029316] (-) TimerEvent: {}
+[7.129750] (-) TimerEvent: {}
+[7.230232] (-) TimerEvent: {}
+[7.330699] (-) TimerEvent: {}
+[7.431294] (-) TimerEvent: {}
+[7.531736] (-) TimerEvent: {}
+[7.632277] (-) TimerEvent: {}
+[7.732587] (-) TimerEvent: {}
+[7.832862] (-) TimerEvent: {}
+[7.933249] (-) TimerEvent: {}
+[8.033612] (-) TimerEvent: {}
+[8.134115] (-) TimerEvent: {}
+[8.234708] (-) TimerEvent: {}
+[8.335353] (-) TimerEvent: {}
+[8.435717] (-) TimerEvent: {}
+[8.536028] (-) TimerEvent: {}
+[8.636388] (-) TimerEvent: {}
+[8.736799] (-) TimerEvent: {}
+[8.837210] (-) TimerEvent: {}
+[8.937616] (-) TimerEvent: {}
+[9.038289] (-) TimerEvent: {}
+[9.138853] (-) TimerEvent: {}
+[9.239384] (-) TimerEvent: {}
+[9.339802] (-) TimerEvent: {}
+[9.440521] (-) TimerEvent: {}
+[9.540951] (-) TimerEvent: {}
+[9.641232] (-) TimerEvent: {}
+[9.741577] (-) TimerEvent: {}
+[9.841831] (-) TimerEvent: {}
+[9.942404] (-) TimerEvent: {}
+[10.042955] (-) TimerEvent: {}
+[10.143419] (-) TimerEvent: {}
+[10.243932] (-) TimerEvent: {}
+[10.344270] (-) TimerEvent: {}
+[10.444795] (-) TimerEvent: {}
+[10.545389] (-) TimerEvent: {}
+[10.645867] (-) TimerEvent: {}
+[10.746677] (-) TimerEvent: {}
+[10.847393] (-) TimerEvent: {}
+[10.947954] (-) TimerEvent: {}
+[11.048831] (-) TimerEvent: {}
+[11.149395] (-) TimerEvent: {}
+[11.249736] (-) TimerEvent: {}
+[11.350324] (-) TimerEvent: {}
+[11.450831] (-) TimerEvent: {}
+[11.551111] (-) TimerEvent: {}
+[11.651640] (-) TimerEvent: {}
+[11.752161] (-) TimerEvent: {}
+[11.852502] (-) TimerEvent: {}
+[11.952898] (-) TimerEvent: {}
+[12.053496] (-) TimerEvent: {}
+[12.154263] (-) TimerEvent: {}
+[12.254762] (-) TimerEvent: {}
+[12.355288] (-) TimerEvent: {}
+[12.455809] (-) TimerEvent: {}
+[12.556336] (-) TimerEvent: {}
+[12.656738] (-) TimerEvent: {}
+[12.757426] (-) TimerEvent: {}
+[12.857776] (-) TimerEvent: {}
+[12.958388] (-) TimerEvent: {}
+[13.058909] (-) TimerEvent: {}
+[13.159421] (-) TimerEvent: {}
+[13.259877] (-) TimerEvent: {}
+[13.360385] (-) TimerEvent: {}
+[13.460768] (-) TimerEvent: {}
+[13.561294] (-) TimerEvent: {}
+[13.661730] (-) TimerEvent: {}
+[13.762213] (-) TimerEvent: {}
+[13.862628] (-) TimerEvent: {}
+[13.962920] (-) TimerEvent: {}
+[14.063261] (-) TimerEvent: {}
+[14.163528] (-) TimerEvent: {}
+[14.263766] (-) TimerEvent: {}
+[14.364095] (-) TimerEvent: {}
+[14.464468] (-) TimerEvent: {}
+[14.564813] (-) TimerEvent: {}
+[14.665215] (-) TimerEvent: {}
+[14.765605] (-) TimerEvent: {}
+[14.866083] (-) TimerEvent: {}
+[14.966523] (-) TimerEvent: {}
+[15.066827] (-) TimerEvent: {}
+[15.167184] (-) TimerEvent: {}
+[15.267661] (-) TimerEvent: {}
+[15.368077] (-) TimerEvent: {}
+[15.468622] (-) TimerEvent: {}
+[15.569240] (-) TimerEvent: {}
+[15.669624] (-) TimerEvent: {}
+[15.770177] (-) TimerEvent: {}
+[15.870779] (-) TimerEvent: {}
+[15.971508] (-) TimerEvent: {}
+[16.072067] (-) TimerEvent: {}
+[16.172480] (-) TimerEvent: {}
+[16.272957] (-) TimerEvent: {}
+[16.373673] (-) TimerEvent: {}
+[16.474178] (-) TimerEvent: {}
+[16.574581] (-) TimerEvent: {}
+[16.674873] (-) TimerEvent: {}
+[16.775350] (-) TimerEvent: {}
+[16.875794] (-) TimerEvent: {}
+[16.976047] (-) TimerEvent: {}
+[17.076543] (-) TimerEvent: {}
+[17.177069] (-) TimerEvent: {}
+[17.277557] (-) TimerEvent: {}
+[17.378127] (-) TimerEvent: {}
+[17.478452] (-) TimerEvent: {}
+[17.578802] (-) TimerEvent: {}
+[17.679083] (-) TimerEvent: {}
+[17.779504] (-) TimerEvent: {}
+[17.879995] (-) TimerEvent: {}
+[17.980280] (-) TimerEvent: {}
+[18.080532] (-) TimerEvent: {}
+[18.180796] (-) TimerEvent: {}
+[18.281116] (-) TimerEvent: {}
+[18.381477] (-) TimerEvent: {}
+[18.481781] (-) TimerEvent: {}
+[18.582243] (-) TimerEvent: {}
+[18.682784] (-) TimerEvent: {}
+[18.783202] (-) TimerEvent: {}
+[18.883598] (-) TimerEvent: {}
+[18.984198] (-) TimerEvent: {}
+[19.084748] (-) TimerEvent: {}
+[19.185233] (-) TimerEvent: {}
+[19.285583] (-) TimerEvent: {}
+[19.386002] (-) TimerEvent: {}
+[19.486460] (-) TimerEvent: {}
+[19.586834] (-) TimerEvent: {}
+[19.687217] (-) TimerEvent: {}
+[19.787586] (-) TimerEvent: {}
+[19.888099] (-) TimerEvent: {}
+[19.988518] (-) TimerEvent: {}
+[20.088896] (-) TimerEvent: {}
+[20.189168] (-) TimerEvent: {}
+[20.289496] (-) TimerEvent: {}
+[20.389868] (-) TimerEvent: {}
+[20.490187] (-) TimerEvent: {}
+[20.590567] (-) TimerEvent: {}
+[20.690900] (-) TimerEvent: {}
+[20.791505] (-) TimerEvent: {}
+[20.891963] (-) TimerEvent: {}
+[20.992368] (-) TimerEvent: {}
+[21.092722] (-) TimerEvent: {}
+[21.193097] (-) TimerEvent: {}
+[21.293739] (-) TimerEvent: {}
+[21.394540] (-) TimerEvent: {}
+[21.495006] (-) TimerEvent: {}
+[21.595365] (-) TimerEvent: {}
+[21.695845] (-) TimerEvent: {}
+[21.796450] (-) TimerEvent: {}
+[21.896934] (-) TimerEvent: {}
+[21.997229] (-) TimerEvent: {}
+[22.097775] (-) TimerEvent: {}
+[22.198385] (-) TimerEvent: {}
+[22.298990] (-) TimerEvent: {}
+[22.399584] (-) TimerEvent: {}
+[22.499923] (-) TimerEvent: {}
+[22.600418] (-) TimerEvent: {}
+[22.700898] (-) TimerEvent: {}
+[22.801306] (-) TimerEvent: {}
+[22.901646] (-) TimerEvent: {}
+[23.001906] (-) TimerEvent: {}
+[23.102495] (-) TimerEvent: {}
+[23.203277] (-) TimerEvent: {}
+[23.303763] (-) TimerEvent: {}
+[23.404023] (-) TimerEvent: {}
+[23.504338] (-) TimerEvent: {}
+[23.604688] (-) TimerEvent: {}
+[23.705217] (-) TimerEvent: {}
+[23.805863] (-) TimerEvent: {}
+[23.906238] (-) TimerEvent: {}
+[24.006606] (-) TimerEvent: {}
+[24.106998] (-) TimerEvent: {}
+[24.207427] (-) TimerEvent: {}
+[24.307812] (-) TimerEvent: {}
+[24.408620] (-) TimerEvent: {}
+[24.509216] (-) TimerEvent: {}
+[24.609730] (-) TimerEvent: {}
+[24.710052] (-) TimerEvent: {}
+[24.810477] (-) TimerEvent: {}
+[24.911047] (-) TimerEvent: {}
+[25.011441] (-) TimerEvent: {}
+[25.111716] (-) TimerEvent: {}
+[25.212361] (-) TimerEvent: {}
+[25.312716] (-) TimerEvent: {}
+[25.413089] (-) TimerEvent: {}
+[25.513609] (-) TimerEvent: {}
+[25.613893] (-) TimerEvent: {}
+[25.714211] (-) TimerEvent: {}
+[25.814539] (-) TimerEvent: {}
+[25.914985] (-) TimerEvent: {}
+[26.015363] (-) TimerEvent: {}
+[26.115744] (-) TimerEvent: {}
+[26.216183] (-) TimerEvent: {}
+[26.316539] (-) TimerEvent: {}
+[26.416963] (-) TimerEvent: {}
+[26.517279] (-) TimerEvent: {}
+[26.617634] (-) TimerEvent: {}
+[26.718004] (-) TimerEvent: {}
+[26.818367] (-) TimerEvent: {}
+[26.918628] (-) TimerEvent: {}
+[27.018894] (-) TimerEvent: {}
+[27.119293] (-) TimerEvent: {}
+[27.219587] (-) TimerEvent: {}
+[27.320009] (-) TimerEvent: {}
+[27.420434] (-) TimerEvent: {}
+[27.520773] (-) TimerEvent: {}
+[27.621550] (-) TimerEvent: {}
+[27.722368] (-) TimerEvent: {}
+[27.822825] (-) TimerEvent: {}
+[27.923167] (-) TimerEvent: {}
+[28.023462] (-) TimerEvent: {}
+[28.123763] (-) TimerEvent: {}
+[28.224034] (-) TimerEvent: {}
+[28.324332] (-) TimerEvent: {}
+[28.424632] (-) TimerEvent: {}
+[28.524931] (-) TimerEvent: {}
+[28.625228] (-) TimerEvent: {}
+[28.725542] (-) TimerEvent: {}
+[28.825832] (-) TimerEvent: {}
+[28.926171] (-) TimerEvent: {}
+[29.026493] (-) TimerEvent: {}
+[29.126813] (-) TimerEvent: {}
+[29.227106] (-) TimerEvent: {}
+[29.327422] (-) TimerEvent: {}
+[29.427738] (-) TimerEvent: {}
+[29.528137] (-) TimerEvent: {}
+[29.628428] (-) TimerEvent: {}
+[29.728680] (-) TimerEvent: {}
+[29.828941] (-) TimerEvent: {}
+[29.929307] (-) TimerEvent: {}
+[30.029576] (-) TimerEvent: {}
+[30.030817] (cone_map_builder) CommandEnded: {'returncode': 0}
+[30.043306] (cone_map_builder) JobEnded: {'identifier': 'cone_map_builder', 'rc': 0}
+[30.043791] (-) EventReactorShutdown: {}

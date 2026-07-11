@@ -1,0 +1,1 @@
+/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/wuta_msgs/ament_cmake_core/wuta_msgsConfig-version.cmake

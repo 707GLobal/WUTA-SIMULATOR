@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/can_simulator/launch/can_simulator.launch.py

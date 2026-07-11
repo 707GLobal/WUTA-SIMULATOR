@@ -1,42 +1,47 @@
-# Operating-system and editor files
-.DS_Store
-Thumbs.db
-*~
-*.swp
-.idea/
+# Ignore catkin generated folders
+devel/
+devel/*
+build/
+build/*
+WUTA-SIM/build
+WUTA-FSD/build
+logs/
+logs/*
 .vscode/
+.vscode/*
+.rosinstall
+.rosinstall.bak
+.DS_Store
+.catkin_workspace
+# Ignore all Rosbags
+**.bag
+# Ignore all images
+**.jpeg
 
-# Python caches and local environments
-__pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-.tox/
-.venv/
-venv/
-*.egg-info/
+# Others
+.idea/
+.idea/*
+cmake-build-debug/
+cmake-build-debug/*
+cmake-build-release/
+cmake-build-release/*
+clion/
+clion-cmake/
+clion-cmake/*
 
-# ROS 2 / colcon output (generated; never commit these directories)
-**/build/
-**/install/
-**/log/
-**/.ros/
-**/ros2_ws/build/
-**/ros2_ws/install/
-**/ros2_ws/log/
+# Catkin stuff
+.catkin_tools/*
+.catkin_tools/
 
-# Runtime and generated data
-*.bag
-*.db3
-*.prof
+**.swp
+
+# binary files
 *.pyc
-*.so
-*.o
-*.a
 
-# Local simulator output
-WUTA-SIM/**/*.yaml.bak
-WUTA-SIM/**/wuta_cone_map.yaml
+# Profiler files
+*.prof
+*.pdf
+
+# IPOPT
+Ipopt-3.12.7/*
+HRT-D/

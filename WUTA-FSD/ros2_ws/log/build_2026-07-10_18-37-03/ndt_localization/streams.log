@@ -1,0 +1,172 @@
+[0.065s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/localization/ndt_localization -DCMAKE_MODULE_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/cmake -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization
+[3.615s] -- The C compiler identification is GNU 11.4.0
+[3.615s] -- The CXX compiler identification is GNU 11.4.0
+[3.615s] -- Detecting C compiler ABI info
+[3.615s] -- Detecting C compiler ABI info - done
+[3.615s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.615s] -- Detecting C compile features
+[3.615s] -- Detecting C compile features - done
+[3.615s] -- Detecting CXX compiler ABI info
+[3.615s] -- Detecting CXX compiler ABI info - done
+[3.615s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.615s] -- Detecting CXX compile features
+[3.615s] -- Detecting CXX compile features - done
+[3.615s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.615s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[3.616s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.616s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[3.616s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.616s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.616s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.616s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.616s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.616s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.616s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.616s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+[3.616s] -- Found FastRTPS: /opt/ros/humble/include
+[3.618s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[3.618s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[3.618s]   CMake.
+[3.619s] 
+[3.619s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[3.619s]   to tell CMake that the project requires at least <min> but has been updated
+[3.619s]   to work with policies introduced by <max> or earlier.
+[3.619s] 
+[3.619s] [0m
+[3.668s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.678s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.797s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.800s] -- Found Threads: TRUE
+[3.875s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.924s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[3.953s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[3.999s] -- Found wuta_msgs: 1.0.0 (/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/share/wuta_msgs/cmake)
+[4.092s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[4.092s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[4.092s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[4.092s]   cmake_policy command to set the policy and suppress this warning.
+[4.092s] 
+[4.092s]   CMake variable EIGEN_ROOT is set to:
+[4.092s] 
+[4.092s]     /usr/include/eigen3
+[4.092s] 
+[4.092s]   For compatibility, find_package is ignoring the variable, but code in a
+[4.092s]   .cmake module might still use it.
+[4.092s] Call Stack (most recent call first):
+[4.092s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[4.092s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[4.092s]   CMakeLists.txt:14 (find_package)
+[4.092s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[4.092s] [0m
+[4.104s] -- Checking for module 'eigen3'
+[4.150s] --   Found eigen3, version 3.4.0
+[4.287s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1")
+[4.287s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[4.288s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):
+[4.288s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[4.288s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[4.288s]   set the policy and suppress this warning.
+[4.288s] 
+[4.288s] Call Stack (most recent call first):
+[4.288s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)
+[4.288s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[4.288s]   CMakeLists.txt:14 (find_package)
+[4.288s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[4.288s] [0m
+[4.338s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization
+[4.546s] -- Checking for module 'libusb-1.0'
+[4.617s] --   Found libusb-1.0, version 1.0.25
+[4.740s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so
+[4.742s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0")
+[4.743s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.848s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33")
+[4.850s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[4.850s] [0m** WARNING ** io features related to png will be disabled[0m
+[4.850s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.897s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so
+[4.910s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX
+[5.112s] -- Found MPI: TRUE  found components: C
+[5.500s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0")
+[5.551s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11")
+[5.656s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37")
+[11.254s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0")
+[12.456s] -- Found X11: /usr/include
+[12.499s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[12.700s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[12.700s] -- Looking for gethostbyname
+[12.897s] -- Looking for gethostbyname - found
+[12.900s] -- Looking for connect
+[13.105s] -- Looking for connect - found
+[13.105s] -- Looking for remove
+[13.221s] -- Looking for remove - found
+[13.223s] -- Looking for shmat
+[13.424s] -- Looking for shmat - found
+[13.425s] -- Looking for IceConnectionNumber in ICE
+[13.618s] -- Looking for IceConnectionNumber in ICE - found
+[13.940s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7")
+[13.969s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so
+[14.121s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3")
+[14.140s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5")
+[14.362s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80")
+[14.418s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")
+[14.425s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1")
+[14.438s] -- Found utf8cpp: /usr/include/utf8cpp
+[14.495s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):
+[14.495s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[14.495s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[14.495s]   set the policy and suppress this warning.
+[14.495s] 
+[14.496s] Call Stack (most recent call first):
+[14.496s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)
+[14.496s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[14.496s]   CMakeLists.txt:14 (find_package)
+[14.496s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[14.496s] [0m
+[14.514s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[14.556s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[14.556s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[14.556s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[14.556s]   cmake_policy command to set the policy and suppress this warning.
+[14.556s] 
+[14.556s]   CMake variable FLANN_ROOT is set to:
+[14.556s] 
+[14.556s]     /usr
+[14.556s] 
+[14.556s]   For compatibility, find_package is ignoring the variable, but code in a
+[14.556s]   .cmake module might still use it.
+[14.556s] Call Stack (most recent call first):
+[14.556s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[14.556s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[14.556s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[14.556s]   CMakeLists.txt:14 (find_package)
+[14.557s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[14.557s] [0m
+[14.576s] -- Checking for module 'flann'
+[14.615s] --   Found flann, version 1.9.1
+[14.704s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so
+[14.707s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[15.550s] -- looking for PCL_COMMON
+[15.557s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so
+[15.557s] -- looking for PCL_OCTREE
+[15.561s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
+[15.568s] -- looking for PCL_IO
+[15.568s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so
+[15.571s] -- looking for PCL_KDTREE
+[15.578s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so
+[15.582s] -- looking for PCL_SEARCH
+[15.587s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so
+[15.590s] -- looking for PCL_SAMPLE_CONSENSUS
+[15.590s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so
+[15.591s] -- looking for PCL_FILTERS
+[15.592s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so
+[15.593s] -- looking for PCL_2D
+[15.593s] -- Found PCL_2D: /usr/include/pcl-1.12
+[15.594s] -- looking for PCL_FEATURES
+[15.597s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so
+[15.597s] -- looking for PCL_REGISTRATION
+[15.599s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so
+[15.601s] -- Found PCL: pcl_common;pcl_octree;pcl_io;pcl_kdtree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_features;pcl_registration;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN
+[15.609s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[15.816s] -- Configuring done (15.7s)
+[15.938s] -- Generating done (0.1s)
+[16.096s] -- Build files have been written to: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization

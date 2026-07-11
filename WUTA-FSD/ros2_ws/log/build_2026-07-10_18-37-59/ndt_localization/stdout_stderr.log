@@ -1,0 +1,26 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/map_saver_node.dir/src/map_saver.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ndt_localization_node.dir/src/ndt_localization.cpp.o[0m
+[ 75%] [1m[32mLinking CXX executable map_saver_node[0m
+[ 75%] Built target map_saver_node
+[100%] [1m[32mLinking CXX executable ndt_localization_node[0m
+[100%] Built target ndt_localization_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/lib/ndt_localization/ndt_localization_node
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/lib/ndt_localization/map_saver_node
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/ndt_localization.yaml
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ament_index/resource_index/package_run_dependencies/ndt_localization
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ament_index/resource_index/parent_prefix_path/ndt_localization
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/ament_prefix_path.sh
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/ament_prefix_path.dsv
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/path.sh
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/path.dsv
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.bash
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.sh
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.zsh
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.dsv
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/package.dsv
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ament_index/resource_index/packages/ndt_localization
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/cmake/ndt_localizationConfig.cmake
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/cmake/ndt_localizationConfig-version.cmake
+-- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/package.xml

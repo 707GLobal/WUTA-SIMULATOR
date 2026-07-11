@@ -1,0 +1,30 @@
+[0.015s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization -- -j8 -l8
+[24.513s] [ 25%] [32mBuilding CXX object CMakeFiles/map_saver_node.dir/src/map_saver.cpp.o[0m
+[24.514s] [ 50%] [32mBuilding CXX object CMakeFiles/ndt_localization_node.dir/src/ndt_localization.cpp.o[0m
+[37.204s] [ 75%] [1m[32mLinking CXX executable map_saver_node[0m
+[39.615s] [ 75%] Built target map_saver_node
+[59.963s] [100%] [1m[32mLinking CXX executable ndt_localization_node[0m
+[62.088s] [100%] Built target ndt_localization_node
+[62.109s] Invoked command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization' returned '0': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization -- -j8 -l8
+[62.109s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization
+[62.117s] -- Install configuration: ""
+[62.118s] -- Execute custom install script
+[62.119s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/lib/ndt_localization/ndt_localization_node
+[62.129s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/lib/ndt_localization/map_saver_node
+[62.142s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/ndt_localization.yaml
+[62.152s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ament_index/resource_index/package_run_dependencies/ndt_localization
+[62.160s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ament_index/resource_index/parent_prefix_path/ndt_localization
+[62.167s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/ament_prefix_path.sh
+[62.178s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/ament_prefix_path.dsv
+[62.191s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/path.sh
+[62.202s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/environment/path.dsv
+[62.213s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.bash
+[62.225s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.sh
+[62.235s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.zsh
+[62.247s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/local_setup.dsv
+[62.257s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/package.dsv
+[62.269s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ament_index/resource_index/packages/ndt_localization
+[62.280s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/cmake/ndt_localizationConfig.cmake
+[62.288s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/cmake/ndt_localizationConfig-version.cmake
+[62.299s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/ndt_localization/share/ndt_localization/package.xml
+[62.313s] Invoked command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization' returned '0': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/ndt_localization

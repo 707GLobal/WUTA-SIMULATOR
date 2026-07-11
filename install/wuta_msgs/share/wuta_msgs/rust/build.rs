@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/wuta_msgs/rosidl_generator_rs/wuta_msgs/rust/build.rs

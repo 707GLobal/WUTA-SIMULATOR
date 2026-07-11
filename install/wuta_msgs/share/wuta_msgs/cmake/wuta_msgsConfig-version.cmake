@@ -1,1 +1,0 @@
-/home/starry1n/WUTA/build/wuta_msgs/ament_cmake_core/wuta_msgsConfig-version.cmake

@@ -1,0 +1,56 @@
+[30.019s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/mapping/cone_map_builder -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder
+[30.049s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[30.049s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[30.049s]   CMake.
+[30.049s] 
+[30.049s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[30.049s]   to tell CMake that the project requires at least <min> but has been updated
+[30.050s]   to work with policies introduced by <max> or earlier.
+[30.050s] 
+[30.050s] 
+[30.067s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[30.373s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[30.391s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[30.463s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[30.469s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[30.484s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[30.502s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[30.524s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[30.588s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[30.590s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[30.707s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[30.756s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[30.768s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[30.807s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[30.880s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[30.883s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[30.884s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[30.885s] -- Found wuta_msgs: 1.0.0 (/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/share/wuta_msgs/cmake)
+[30.942s] -- Configuring done (0.9s)
+[30.960s] -- Generating done (0.0s)
+[30.983s] -- Build files have been written to: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder
+[60.017s] Invoked command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder' returned '0': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/starry1n/WUTA/WUTA-FSD/ros2_ws/src/mapping/cone_map_builder -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder
+[60.019s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder -- -j8 -l8
+[60.076s] [100%] Built target cone_map_builder_node
+[60.084s] Invoked command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder' returned '0': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder -- -j8 -l8
+[60.093s] Invoking command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder
+[60.098s] -- Install configuration: ""
+[60.098s] -- Execute custom install script
+[60.098s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/lib/cone_map_builder/cone_map_builder_node
+[60.098s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/config/cone_map_builder.yaml
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/package_run_dependencies/cone_map_builder
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/parent_prefix_path/cone_map_builder
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/ament_prefix_path.sh
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/ament_prefix_path.dsv
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/path.sh
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/environment/path.dsv
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.bash
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.sh
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.zsh
+[60.099s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/local_setup.dsv
+[60.099s] -- Symlinking: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/package.dsv
+[60.106s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/ament_index/resource_index/packages/cone_map_builder
+[60.106s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/cmake/cone_map_builderConfig.cmake
+[60.106s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/cmake/cone_map_builderConfig-version.cmake
+[60.106s] -- Up-to-date symlink: /home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/cone_map_builder/share/cone_map_builder/package.xml
+[60.108s] Invoked command in '/home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder' returned '0': AMENT_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/starry1n/WUTA/WUTA-FSD/ros2_ws/install/wuta_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/starry1n/WUTA/WUTA-FSD/ros2_ws/build/cone_map_builder
