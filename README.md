@@ -1,5 +1,33 @@
 # simulator_bringup
 
+## Clone the complete repository
+
+WUTA 使用 Git submodule 管理 FSD 和模拟器组件。首次克隆时请使用
+`--recurse-submodules`，这样会同时拉取四个子仓库以及 `WUTA-FSD` 内部的定位依赖：
+
+```bash
+git clone --recurse-submodules https://github.com/starry1N/WUTA.git
+cd WUTA
+```
+
+如果已经完成普通克隆，执行以下命令补齐全部子模块：
+
+```bash
+git submodule update --init --recursive
+```
+
+更新主仓库及其已记录的子模块版本：
+
+```bash
+git pull --recurse-submodules
+git submodule update --init --recursive
+```
+
+主仓库当前记录的子模块包括：`WUTA-FSD`、`WUTA-SIM/perception_simulation`、
+`WUTA-SIM/vehicle_model` 和 `WUTA-SIM/can_simulator`。其中 `WUTA-FSD` 使用
+`小登测试` 分支，其余三个子仓库使用 `main` 分支；实际代码版本由主仓库提交
+中的 submodule commit 固定。
+
 `simulator_bringup` 是 WUTA 仿真系统的统一 ROS 2 启动包。各模拟器仍是独立包；
 本包通过包含它们各自的 launch 文件进行编排，并可选启动 WUTA-FSD Level A
 闭环。`ins_simulator` 目前只预留接入口，不包含任何实现或包依赖。
