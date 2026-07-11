@@ -1,6 +1,20 @@
-# simulator_bringup
+# WUTA 仿真系统
 
-## Clone the complete repository
+WUTA 是一套基于 ROS 2 的自动驾驶仿真系统。主仓库负责统一启动和编排，核心算法与模拟器组件分别由 Git submodule 管理。
+
+## 目录结构
+
+| 路径 | 说明 | 分支 |
+| --- | --- | --- |
+| `WUTA-FSD` | FSD 算法栈 | `小登测试` |
+| `WUTA-SIM/perception_simulation` | LiDAR 感知模拟器 | `main` |
+| `WUTA-SIM/vehicle_model` | 车辆模型 | `main` |
+| `WUTA-SIM/can_simulator` | CAN 模拟器 | `main` |
+| `WUTA-SIM/simulator_bringup` | 模拟器统一启动包 | 主仓库目录 |
+
+`WUTA-FSD` 内部还包含 `kiss-icp` 和 `robot_localization` 两个递归子模块。
+
+## 克隆完整代码
 
 WUTA 使用 Git submodule 管理 FSD 和模拟器组件。首次克隆时请使用
 `--recurse-submodules`，这样会同时拉取四个子仓库以及 `WUTA-FSD` 内部的定位依赖：
@@ -28,11 +42,93 @@ git submodule update --init --recursive
 `小登测试` 分支，其余三个子仓库使用 `main` 分支；实际代码版本由主仓库提交
 中的 submodule commit 固定。
 
+## 子模块开发与指针更新
+
+主仓库只记录子模块的 commit 指针，不直接记录子模块内部文件。开发时应先进入对应子模块，在子模块自己的仓库中完成提交和推送，再回到主仓库提交新的指针。
+
+### 获取最新版本
+
+```bash
+cd /path/to/WUTA
+git pull --recurse-submodules
+git submodule update --init --recursive
+```
+
+`git submodule update` 会切换到主仓库记录的准确 commit，这是保证构建可复现所需要的行为。
+
+### 在子模块中开发
+
+以 `vehicle_model` 为例：
+
+```bash
+cd /path/to/WUTA/WUTA-SIM/vehicle_model
+git switch main
+# 修改代码并测试
+git status
+git add <修改的文件>
+git commit -m "describe the change"
+git push origin main
+```
+
+`WUTA-FSD` 使用 `小登测试` 分支；其余三个子模块使用 `main` 分支。不要在主仓库目录直接使用 `git add -A`，否则容易把构建产物或无关改动误加入主仓库。
+
+### 在主仓库更新子模块指针
+
+子模块提交推送成功后，回到主仓库并提交对应目录：
+
+```bash
+cd /path/to/WUTA
+git status
+git add WUTA-SIM/vehicle_model
+git commit -m "update vehicle model submodule"
+git push origin main
+```
+
+其他子模块对应路径如下：
+
+```bash
+git add WUTA-FSD
+git add WUTA-SIM/perception_simulation
+git add WUTA-SIM/vehicle_model
+git add WUTA-SIM/can_simulator
+```
+
+一次更新多个子模块时，先检查指针变化，再统一提交：
+
+```bash
+git diff --submodule=log
+git add WUTA-FSD WUTA-SIM/perception_simulation \
+  WUTA-SIM/vehicle_model WUTA-SIM/can_simulator
+git commit -m "update simulator submodules"
+git push origin main
+```
+
+### 更新到远程分支最新提交
+
+只有在确实需要升级主仓库依赖版本时，才使用 `--remote`：
+
+```bash
+git submodule update --remote --merge WUTA-FSD
+git submodule update --remote --merge WUTA-SIM/perception_simulation
+git submodule update --remote --merge WUTA-SIM/vehicle_model
+git submodule update --remote --merge WUTA-SIM/can_simulator
+```
+
+该命令只会在本地移动子模块指针；还必须执行 `git add <子模块路径>`、提交并推送主仓库，其他人才能获得更新后的版本。
+
+### 常用状态检查
+
+```bash
+git status
+git submodule foreach --recursive 'git status --short'
+git diff --submodule=log
+```
+
 `simulator_bringup` 是 WUTA 仿真系统的统一 ROS 2 启动包。各模拟器仍是独立包；
 本包通过包含它们各自的 launch 文件进行编排，并可选启动 WUTA-FSD Level A
 闭环。`ins_simulator` 目前只预留接入口，不包含任何实现或包依赖。
 
-## Dependency order
+## 系统依赖与启动顺序
 
 1. `vehicle_model` 先启动，接收 WUTA-FSD 的
    `autoware_msgs/msg/Command`，发布 `/sim/ground_truth`。
@@ -46,7 +142,7 @@ git submodule update --init --recursive
 `map -> base_link` TF、就绪状态以及（`auto_start:=true` 时）`EXPLORE`
 任务状态。它只是 ground truth 接口适配器，不实现 INS 模型。
 
-## Build
+## 构建
 
 推荐从仓库根目录使用一键脚本。它会先调用 WUTA-FSD 自带的
 `ros2_ws/build_ws.sh` 完整构建 16 个 FSD 包，再构建模拟器 overlay：
@@ -56,10 +152,10 @@ cd /path/to/WUTA
 ./start_simulator.sh
 ```
 
-### 一键脚本用法
+### 一键脚本参数
 
 | 参数 | 作用 |
-|---|---|
+| --- | --- |
 | 无参数 | 增量构建完整 WUTA-FSD 和模拟器，然后启动完整闭环 |
 | `--clean` | 清理两个工作区后重新完整构建并启动 |
 | `--build-only` | 完成构建后退出，不启动 ROS 节点 |
@@ -121,13 +217,13 @@ colcon build --base-paths . --symlink-install \
 source install/setup.bash
 ```
 
-## Run
+## 启动与参数
 
 ```bash
 ros2 launch simulator_bringup simulator.launch.py
 ```
 
-Useful overrides:
+常用启动参数：
 
 ```bash
 ros2 launch simulator_bringup simulator.launch.py launch_fsd:=false
@@ -146,7 +242,7 @@ ros2 launch simulator_bringup simulator.launch.py \
 `ins_simulator` 自身的 launch 文件，并在 `package.xml` 增加对应
 `exec_depend` 即可。
 
-## RViz2 visualization
+## RViz2 可视化
 
 推荐直接用一键脚本启动完整闭环和 RViz2：
 
@@ -184,7 +280,7 @@ WUTA-SIM/simulator_bringup/rviz/wuta_simulator.rviz
 默认 RViz 设置：
 
 | Display | Topic | 用途 |
-|---|---|---|
+| --- | --- | --- |
 | `TF` | `map -> base_link -> lidar` | 坐标系关系 |
 | `Odometry` | `/sim/ground_truth` | 车辆真值位置 |
 | `PointCloud2` | `/hesai/pandar` | LiDAR 仿真点云 |
