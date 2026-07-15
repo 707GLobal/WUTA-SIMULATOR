@@ -14,3 +14,7 @@
 	path = WUTA-SIM/can_simulator
 	url = https://github.com/707GLobal/can_simulator.git
 	branch = main
+[submodule "WUTA-SIM/wuta-ins-simulator"]
+	path = WUTA-SIM/wuta-ins-simulator
+	url = https://github.com/Litieyue/wuta-ins-simulator.git
+	branch = main
