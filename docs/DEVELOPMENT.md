@@ -7,7 +7,7 @@ ament/CMake 编译。仓库有两个 overlay：
 
 ```text
 WUTA/
-├── WUTA-FSD/ros2_ws/       # C++ FSD、消息包、待集成的 KISS-ICP/robot_localization 源码
+├── WUTA-FSD/ros2_ws/       # C++ FSD、消息包、KISS-ICP/robot_localization 定位链
 ├── WUTA-SIM/               # Python 仿真包、bringup、赛道、RViz
 ├── start_simulator.sh      # 推荐入口
 └── docs/
@@ -51,6 +51,16 @@ cd /home/starry1n/WUTA
 再使用 `--skip-build --rviz`。首次排障可使用 `--clean --rviz`。RViz 仅在传入 `--rviz`
 时启动。
 
+仓库使用 Git submodule 管理仿真组件。首次获取或切换到包含 INS 的主仓库提交后，先初始化：
+
+```bash
+cd /home/starry1n/WUTA
+git submodule update --init --recursive
+```
+
+INS 包位于 `WUTA-SIM/wuta-ins-simulator`，并已是 `simulator_bringup` 的运行依赖；因此
+`--packages-up-to simulator_bringup` 会一并构建它。
+
 ## 3. 开发工作流
 
 1. 在所属 package 修改源码、launch 或 config；接口变更同时修改 `msg` 定义、调用方和
@@ -66,7 +76,7 @@ cd /home/starry1n/WUTA
 4. 检查接口：`ros2 node list`、`ros2 topic list -t`、
    `ros2 topic info -v /sim/lidar/track_cones`。
 5. 检查 TF：`ros2 run tf2_tools view_frames`，默认仿真必须有
-   `map -> base_link -> lidar`。
+   `map -> odom -> base_link -> lidar`。
 6. 运行已有 LiDAR 核心测试：
 
    ```bash
@@ -80,11 +90,16 @@ cd /home/starry1n/WUTA
   `WUTA-SIM/perception_simulation/tracks/`；不要把生成的 `/tmp/wuta_*.yaml`/PCD 当作源码。
 - `/sim/lidar/track_cones` 是 YAML 真值，`/mapping/cone_map_viz` 是 FSD 估计地图。调试时
   必须标明二者，不能替换接线。
-- 不要把 KISS-ICP 源码或 EKF YAML 视为已接通的定位功能：INS 模拟器与 KISS-ICP + EKF
-  集成均待实现；当前仿真定位源是 `simulation_bridge`。
+- INS 是 `WUTA-SIM/wuta-ins-simulator` submodule，默认与 KISS-ICP + EKF 一起启动；
+  默认数据链为 `/sim/ground_truth -> /cg410/odometry -> ekf_node` 和
+  `/hesai/pandar -> /kiss/odometry -> ekf_node -> /localization/pose`。需要真值回退时使用
+  `launch_ins:=false launch_localization:=false use_ground_truth_localization:=true`，不要与
+  默认 EKF TF 同时开启。
 - RViz 的 `MarkerArray` 使用真实 `Topic` 字段；看到
   `visualization_marker_array` 表示 RViz 回退到默认占位而非系统发布者。
-- lidar-frame 数据必须与 TF 时间戳匹配；不要用无关的 wall-clock 时间覆盖传感器 stamp。
+- 点云、ConeArray 必须保留采样时间；`cones_viz` 必须在采样时刻精确转换到 `map` 后发布，禁止用零时间戳将历史检测套用到当前 TF。
+  ConeMapBuilder 只使用检测采样时刻 TF；暂时不可用时在 `pending_detection_timeout_sec`
+  时间内排队重试，默认不使用 latest TF，避免运动造成地图偏移。
 
 ## 5. 代码与 Git 规范
 

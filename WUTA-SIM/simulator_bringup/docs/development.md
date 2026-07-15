@@ -62,6 +62,28 @@ cd /home/starry1n/WUTA
 应先完全关闭旧的 ROS/RViz 进程，再启动新实例，避免手工打开的旧 RViz 配置或不同
 ROS 环境导致话题看似缺失。
 
+## 默认 INS 与融合定位链
+
+`WUTA-SIM/wuta-ins-simulator` 是主仓库记录的 Git submodule。首次拉取或更新主仓库后，
+先在根目录执行：
+
+```bash
+git submodule update --init --recursive
+```
+
+`simulator.launch.py` 默认启动 INS 与融合定位。INS 将 `/sim/ground_truth` 加噪后以 20 Hz
+发布 `/cg410/odometry`；KISS-ICP 处理 `/hesai/pandar` 并发布 `/kiss/odometry`；EKF 融合两者
+并发布 `/odometry/filtered`，localization_manager 最终发布 `/localization/pose`。
+
+TF 所有权固定为：bringup 发布静态同原点 `map -> odom` 与 `base_link -> lidar`，EKF 发布唯一
+动态 `odom -> base_link`，KISS 不发布 TF。需要真值回退时，设置
+`use_ground_truth_localization:=true`，启动文件会自动关闭 INS 与融合定位：
+
+```bash
+ros2 launch simulator_bringup simulator.launch.py \
+  use_ground_truth_localization:=true
+```
+
 ## 配置检查
 
 构建 `simulator_bringup` 后，可确认安装配置不含 RViz 默认占位话题：
@@ -74,4 +96,3 @@ rg 'visualization_marker_array' \
 ```
 
 最后一条命令不应有输出。
-

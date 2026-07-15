@@ -19,6 +19,7 @@ class SimulationBridge(Node):
 
         self.declare_parameter("ground_truth_topic", "/sim/ground_truth")
         self.declare_parameter("publish_mission_state", True)
+        self.declare_parameter("publish_truth_localization", False)
         self.declare_parameter("mission_mode", "trackdrive")
         self.declare_parameter("map_frame", "map")
         self.declare_parameter("base_frame", "base_link")
@@ -28,6 +29,9 @@ class SimulationBridge(Node):
         )
         self.publish_mission_state = bool(
             self.get_parameter("publish_mission_state").value
+        )
+        self.publish_truth_localization = bool(
+            self.get_parameter("publish_truth_localization").value
         )
         self.map_frame = str(self.get_parameter("map_frame").value)
         self.base_frame = str(self.get_parameter("base_frame").value)
@@ -52,12 +56,16 @@ class SimulationBridge(Node):
         self.ground_truth_sub = self.create_subscription(
             Odometry, ground_truth_topic, self._on_ground_truth, 10
         )
+        self.mission_complete_sub = self.create_subscription(
+            Bool, "/system/mission_complete", self._on_mission_complete, 10
+        )
         self.status_timer = self.create_timer(0.1, self._publish_status)
         self.received_ground_truth = False
+        self.mission_complete = False
 
         self.get_logger().info(
-            "Simulation bridge waiting for ground truth on %s"
-            % ground_truth_topic
+            "Simulation bridge waiting for ground truth on %s; truth localization=%s"
+            % (ground_truth_topic, self.publish_truth_localization)
         )
 
     @staticmethod
@@ -76,6 +84,9 @@ class SimulationBridge(Node):
     def _on_ground_truth(self, msg: Odometry) -> None:
         self.received_ground_truth = True
 
+        if not self.publish_truth_localization:
+            return
+
         pose = PoseStamped()
         pose.header = msg.header
         pose.header.frame_id = self.map_frame
@@ -91,24 +102,40 @@ class SimulationBridge(Node):
         transform.transform.rotation = pose.pose.orientation
         self.tf_broadcaster.sendTransform(transform)
 
+    def _on_mission_complete(self, msg: Bool) -> None:
+        if msg.data and not self.mission_complete:
+            self.mission_complete = True
+            self.get_logger().info(
+                "Received /system/mission_complete; publishing FINISH state"
+            )
+
     def _publish_status(self) -> None:
         lidar_ready = Bool()
         lidar_ready.data = self.received_ground_truth
         self.lidar_ready_pub.publish(lidar_ready)
 
-        localization_ready = Bool()
-        localization_ready.data = self.received_ground_truth
-        self.localization_ready_pub.publish(localization_ready)
+        if self.publish_truth_localization:
+            localization_ready = Bool()
+            localization_ready.data = self.received_ground_truth
+            self.localization_ready_pub.publish(localization_ready)
 
         if not self.publish_mission_state:
             return
 
         state = MissionState()
         state.header.stamp = self.get_clock().now().to_msg()
-        state.state = MissionState.EXPLORE
+        state.state = (
+            MissionState.FINISH
+            if self.mission_complete
+            else MissionState.EXPLORE
+        )
         state.mission_mode = self.mission_mode
         state.localization_mode = MissionState.LOC_KISS_ICP
-        state.description = "simulation auto-start"
+        state.description = (
+            "simulation skidpad complete"
+            if self.mission_complete
+            else "simulation auto-start"
+        )
         self.mission_state_pub.publish(state)
 
 

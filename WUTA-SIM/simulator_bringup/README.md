@@ -2,21 +2,27 @@
 
 `simulator_bringup` 是 WUTA 仿真系统的统一 ROS 2 启动包。各模拟器仍是独立包；
 本包通过包含它们各自的 launch 文件进行编排，并可选启动 WUTA-FSD Level A
-闭环。`ins_simulator` 目前只预留接入口，不包含任何实现或包依赖。
+闭环。默认定位链由 `ins_simulator`、KISS-ICP、EKF 和 localization_manager 组成：
+INS 将 ground truth 加噪后发布 `/cg410/odometry`，KISS-ICP 从 `/hesai/pandar` 生成
+`/kiss/odometry`，EKF 融合后经 localization_manager 发布 `/localization/pose`。
 
 ## Dependency order
 
 1. `vehicle_model` 先启动，接收 WUTA-FSD 的
    `autoware_msgs/msg/Command`，发布 `/sim/ground_truth`。
 2. `can_simulator` 和 `lidar_sim` 在 ground truth 源启动后再启动。
-3. `ins_simulator` 的位置已经预留；当前不查找、不启动该包。
-4. 启用 `launch_fsd` 时，WUTA-FSD 按数据流顺序启动：
+3. `can_simulator`、`lidar_sim` 与 `ins_simulator` 默认启动；INS 发布模拟 CG-410
+   里程计。
+4. 随后默认启动 KISS-ICP、EKF 和 localization_manager，产生统一定位输出。
+5. 启用 `launch_fsd` 时，WUTA-FSD 按数据流顺序启动：
    `lidar_detection` -> `cone_map_builder` -> `boundary_detector` ->
    `path_generator` -> `controller`.
 
-`simulation_bridge` 为 Level A 联调提供 `/localization/pose`、
-`map -> base_link` TF、就绪状态以及（`auto_start:=true` 时）`EXPLORE`
-任务状态。它只是 ground truth 接口适配器，不实现 INS 模型。
+`simulation_bridge` 默认提供就绪状态以及（`auto_start:=true` 时）`EXPLORE` 任务状态。收到控制器的
+`/system/mission_complete`（`std_msgs/msg/Bool=true`）后，它改为稳定发布既有的
+`MissionState.FINISH`，使 Skidpad 可完成任务状态闭环。
+默认的 `/localization/pose` 与动态 `odom -> base_link` TF 由融合定位链发布；bridge 的真值
+pose/TF 仅在 `use_ground_truth_localization:=true` 时启用。
 
 ## Build
 
@@ -106,7 +112,7 @@ ros2 launch simulator_bringup simulator.launch.py launch_fsd:=false
 ros2 launch simulator_bringup simulator.launch.py launch_rviz:=true
 ros2 launch simulator_bringup simulator.launch.py track_file:=skidpad mission_mode:=skidpad
 ros2 launch simulator_bringup simulator.launch.py startup_delay:=1.0
-ros2 launch simulator_bringup simulator.launch.py launch_ins:=true  # 仅打印预留提示
+ros2 launch simulator_bringup simulator.launch.py use_ground_truth_localization:=true
 ros2 launch simulator_bringup simulator.launch.py \
   track_file:=/path/to/track.yaml start_x:=1.0 start_y:=2.0 start_yaw:=0.5
 ```
@@ -114,9 +120,10 @@ ros2 launch simulator_bringup simulator.launch.py \
 `track_file` 和 `mission_mode` 应选择同一比赛项目。若赛道起点不是原点，还需传入
 一致的 `start_x`、`start_y` 和 `start_yaw`。
 
-未来接入 INS 时，在 launch 文件标出的 `INS integration point` 处包含
-`ins_simulator` 自身的 launch 文件，并在 `package.xml` 增加对应
-`exec_depend` 即可。
+`launch_ins` 和 `launch_localization` 默认均为 `true`。为避免多个节点同时发布 base_link
+TF，KISS-ICP 不发布 TF，EKF 是唯一的动态 `odom -> base_link` 发布者；bringup 还发布静态
+同原点 `map -> odom` 与 `base_link -> lidar`。调试真值回退时设置
+`use_ground_truth_localization:=true`，启动文件会自动关闭 INS 与融合定位。
 
 ## RViz2 visualization
 
@@ -157,7 +164,7 @@ WUTA-SIM/simulator_bringup/rviz/wuta_simulator.rviz
 
 | Display | Topic | 用途 |
 |---|---|---|
-| `TF` | `map -> base_link -> lidar` | 坐标系关系 |
+| `TF` | `map -> odom -> base_link -> lidar` | 坐标系关系 |
 | `Odometry` | `/sim/ground_truth` | 车辆真值位置 |
 | `PointCloud2` | `/hesai/pandar` | LiDAR 仿真点云 |
 | `MarkerArray` | `/sim/lidar/visible_cones` | LiDAR 当前可见锥筒 |
@@ -200,7 +207,6 @@ ros2 topic hz /planning/centerline
 ros2 run tf2_tools view_frames
 ```
 
-如果 RViz 提示 `No transform from [lidar] to [map]`，先确认仿真仍在运行，并等待
-`simulation_bridge` 发布 `map -> base_link`，以及静态 TF 发布
-`base_link -> lidar`。如果只缺点云显示，检查 `/hesai/pandar` Display 的
+如果 RViz 提示 `No transform from [lidar] to [map]`，先确认仿真仍在运行，并检查静态
+`map -> odom`、EKF 的 `odom -> base_link`、以及静态 `base_link -> lidar`。如果只缺点云显示，检查 `/hesai/pandar` Display 的
 `Reliability Policy` 是否为 `Best Effort`。

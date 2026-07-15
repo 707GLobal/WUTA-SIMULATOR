@@ -9,7 +9,6 @@ from launch import LaunchDescription
 from launch.actions import (
     DeclareLaunchArgument,
     IncludeLaunchDescription,
-    LogInfo,
     TimerAction,
 )
 from launch.conditions import IfCondition
@@ -34,7 +33,9 @@ def generate_launch_description():
 
     vehicle_share = FindPackageShare("vehicle_model")
     can_share = FindPackageShare("can_simulator")
+    ins_share = FindPackageShare("ins_simulator")
     lidar_share = FindPackageShare("lidar_sim")
+    localization_share = FindPackageShare("localization_manager")
     default_track = PathJoinSubstitution(
         [lidar_share, "tracks", "trackdrive.yaml"]
     )
@@ -78,19 +79,28 @@ def generate_launch_description():
         }.items(),
     )
 
-    # INS integration point (intentionally no FindPackageShare("ins_simulator")
-    # yet).  Consequently the bringup package works before that package exists.
-    ins_placeholder = LogInfo(
-        msg=(
-            "ins_simulator is reserved but not implemented; "
-            "continuing without INS output"
+    # INS feeds the default KISS-ICP + EKF localization chain.  It remains
+    # switchable for hardware-in-the-loop or truth-localization debugging.
+    ins = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [ins_share, "launch", "ins_simulator.launch.py"]
+            )
         ),
-        condition=IfCondition(LaunchConfiguration("launch_ins")),
+        # Truth localization and estimated localization must never publish
+        # competing map->base_link transforms. Selecting truth mode therefore
+        # disables the INS branch automatically.
+        condition=IfCondition(
+            PythonExpression([
+                "'", LaunchConfiguration("launch_ins"), "' == 'true' and '",
+                LaunchConfiguration("use_ground_truth_localization"),
+                "' == 'false'",
+            ])
+        ),
     )
 
-    # Level A ground-truth adapter used while INS is unavailable.  It supplies
-    # the localization and mission interfaces expected by the optional FSD
-    # pipeline; it is not an INS simulator.
+    # The bridge always supplies simulator readiness and mission state.  Truth
+    # pose/TF output is an explicit fallback; normally EKF owns those outputs.
     bridge = Node(
         package="simulator_bringup",
         executable="simulation_bridge",
@@ -102,8 +112,29 @@ def generate_launch_description():
                     LaunchConfiguration("auto_start"), value_type=bool
                 ),
                 "mission_mode": LaunchConfiguration("mission_mode"),
+                "publish_truth_localization": ParameterValue(
+                    LaunchConfiguration("use_ground_truth_localization"),
+                    value_type=bool,
+                ),
             }
         ],
+    )
+    localization = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [localization_share, "launch", "localization.launch.py"]
+            )
+        ),
+        launch_arguments={
+            "pointcloud_topic": "/hesai/pandar",
+        }.items(),
+        condition=IfCondition(
+            PythonExpression([
+                "'", LaunchConfiguration("launch_localization"), "' == 'true' and '",
+                LaunchConfiguration("use_ground_truth_localization"),
+                "' == 'false'",
+            ])
+        ),
     )
     base_to_lidar = Node(
         package="tf2_ros",
@@ -113,6 +144,17 @@ def generate_launch_description():
             "--x", "0.0", "--y", "0.0", "--z", "1.0",
             "--roll", "0.0", "--pitch", "0.0", "--yaw", "0.0",
             "--frame-id", "base_link", "--child-frame-id", "lidar",
+        ],
+        output="screen",
+    )
+    map_to_odom = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="map_to_odom_tf",
+        arguments=[
+            "--x", "0.0", "--y", "0.0", "--z", "0.0",
+            "--roll", "0.0", "--pitch", "0.0", "--yaw", "0.0",
+            "--frame-id", "map", "--child-frame-id", "odom",
         ],
         output="screen",
     )
@@ -237,10 +279,28 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 "launch_ins",
+                default_value="true",
+                choices=["true", "false"],
+                description=(
+                    "Launch ins_simulator to publish /cg410/odometry (default)."
+                ),
+            ),
+            DeclareLaunchArgument(
+                "launch_localization",
+                default_value="true",
+                choices=["true", "false"],
+                description=(
+                    "Launch KISS-ICP, EKF and localization_manager (default)."
+                ),
+            ),
+            DeclareLaunchArgument(
+                "use_ground_truth_localization",
                 default_value="false",
                 choices=["true", "false"],
                 description=(
-                    "Reserved switch for the future ins_simulator package."
+                    "Publish ground-truth /localization/pose and map->base_link "
+                    "from simulation_bridge instead of the EKF output; this "
+                    "automatically disables INS and localization."
                 ),
             ),
             DeclareLaunchArgument(
@@ -271,11 +331,12 @@ def generate_launch_description():
                 delay,
                 bridge,
                 can,
+                ins,
                 lidar,
+                map_to_odom,
                 base_to_lidar,
-                ins_placeholder,
             ),
-            _delayed(PythonExpression([delay, " * 2"]), rviz),
+            _delayed(PythonExpression([delay, " * 2"]), localization, rviz),
             _delayed(PythonExpression([delay, " * 3"]), lidar_detection),
             _delayed(PythonExpression([delay, " * 4"]), cone_map_builder),
             _delayed(PythonExpression([delay, " * 5"]), boundary_detector),

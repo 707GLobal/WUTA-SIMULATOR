@@ -21,10 +21,10 @@
   <exec_depend>wuta_msgs</exec_depend>
 
   <exec_depend>can_simulator</exec_depend>
+  <exec_depend>ins_simulator</exec_depend>
   <exec_depend>lidar_sim</exec_depend>
+  <exec_depend>localization_manager</exec_depend>
   <exec_depend>vehicle_model</exec_depend>
-
-  <!-- ins_simulator is intentionally omitted until that package exists. -->
 
   <exec_depend>autoware_msgs</exec_depend>
   <exec_depend>boundary_detector</exec_depend>
