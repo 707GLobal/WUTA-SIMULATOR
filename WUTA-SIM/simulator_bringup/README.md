@@ -43,6 +43,7 @@ cd /path/to/WUTA
 | `--build-only` | 完成构建后退出，不启动 ROS 节点 |
 | `--skip-build` | 使用已有安装空间直接启动 |
 | `--rviz` | 启动时同时打开 RViz2 默认可视化配置 |
+| `--config PATH` | 读取 YAML 构建/启动默认参数；命令行标志与 `name:=value` 可覆盖其中任意项 |
 | `-h` / `--help` | 显示脚本帮助 |
 | `--` | 后续参数全部原样传给 ROS launch |
 
@@ -75,6 +76,16 @@ cd /path/to/WUTA
 
 # 选择赛道和任务模式
 ./start_simulator.sh track_file:=skidpad mission_mode:=skidpad
+
+# Skidpad 完整闭环并打开 RViz（起点自动为 -15 m）
+./start_simulator.sh --rviz track_file:=skidpad mission_mode:=skidpad
+
+# 真值定位调试：不启动 INS、KISS-ICP 或 EKF
+./start_simulator.sh --skip-build use_ground_truth_localization:=true
+
+# 使用另一套启动默认值；命令行参数优先
+./start_simulator.sh --config config/simulator_defaults.yaml \
+  track_file:=skidpad mission_mode:=skidpad
 
 # 调整依赖阶段之间的启动间隔
 ./start_simulator.sh startup_delay:=1.0
@@ -113,6 +124,7 @@ ros2 launch simulator_bringup simulator.launch.py launch_rviz:=true
 ros2 launch simulator_bringup simulator.launch.py track_file:=skidpad mission_mode:=skidpad
 ros2 launch simulator_bringup simulator.launch.py startup_delay:=1.0
 ros2 launch simulator_bringup simulator.launch.py use_ground_truth_localization:=true
+ros2 launch simulator_bringup simulator.launch.py auto_start:=false
 ros2 launch simulator_bringup simulator.launch.py \
   track_file:=/path/to/track.yaml start_x:=1.0 start_y:=2.0 start_yaw:=0.5
 ```
@@ -120,10 +132,33 @@ ros2 launch simulator_bringup simulator.launch.py \
 `track_file` 和 `mission_mode` 应选择同一比赛项目。若赛道起点不是原点，还需传入
 一致的 `start_x`、`start_y` 和 `start_yaw`。
 
-`launch_ins` 和 `launch_localization` 默认均为 `true`。为避免多个节点同时发布 base_link
-TF，KISS-ICP 不发布 TF，EKF 是唯一的动态 `odom -> base_link` 发布者；bringup 还发布静态
-同原点 `map -> odom` 与 `base_link -> lidar`。调试真值回退时设置
-`use_ground_truth_localization:=true`，启动文件会自动关闭 INS 与融合定位。
+定位相关参数如下。`use_ground_truth_localization:=true` 是唯一推荐的“无需 INS/EKF”调试
+方式：启动文件会自动关闭 INS、KISS-ICP、EKF 与 localization_manager，并由 bridge 发布
+真值 `/localization/pose` 和 `map -> base_link`。不要只设置 `launch_ins:=false`，否则 EKF
+失去 INS 输入；也不要只设置 `launch_localization:=false` 后启动 FSD，因为控制链将没有
+`/localization/pose`。
+
+| 场景 | 参数 | 结果 |
+| --- | --- | --- |
+| 默认闭环 | 不传定位参数 | INS + KISS-ICP + EKF + localization_manager，EKF 发布 `odom -> base_link` |
+| 真值定位调试（不接 INS/EKF） | `use_ground_truth_localization:=true` | bridge 发布真值 pose/TF；INS 与融合定位自动关闭 |
+| 仅仿真传感器/RViz | `launch_fsd:=false use_ground_truth_localization:=true` | 不启动 FSD 感知、规划、控制；保留真值传感器与 TF |
+
+其他常用 launch 参数：`auto_start:=false` 停留在 `IDLE` 等待外部任务状态；`start_x:=auto`
+会在 Skidpad 自动选用 `-15 m`、其它赛项选用 `0 m`；可用 `wheel_base`、`max_steer_angle`
+和 `vehicle_dt` 覆盖车辆模型参数。
+
+### 启动默认参数配置
+
+根目录的 [`config/simulator_defaults.yaml`](../../config/simulator_defaults.yaml) 是
+`start_simulator.sh` 的默认参数来源。`build` 段包含 `clean`、`skip_build`、`build_only`；
+`launch_arguments` 段包含当前 `simulator.launch.py` 声明的全部参数：赛道/任务、FSD、定位、
+RViz、车辆模型和初始位姿。脚本不依赖 `yq` 或 PyYAML，而是使用内置的扁平 YAML 解析器。
+命令行参数始终优先，例如 `track_file:=skidpad` 仅覆盖配置中的 `track_file`。使用另一份配置可传入：
+
+```bash
+./start_simulator.sh --config /path/to/simulator_defaults.yaml --rviz
+```
 
 ## RViz2 visualization
 

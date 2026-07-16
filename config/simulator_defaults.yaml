@@ -1,0 +1,25 @@
+# Default values for ./start_simulator.sh.
+# Command-line flags and name:=value arguments override this file.
+
+build:
+  clean: false
+  skip_build: false
+  build_only: false
+
+launch_arguments:
+  track_file: trackdrive
+  mission_mode: trackdrive
+  launch_fsd: true
+  auto_start: true
+  startup_delay: 0.5
+  launch_ins: true
+  launch_localization: true
+  use_ground_truth_localization: false
+  launch_rviz: false
+  rviz_config: WUTA-SIM/simulator_bringup/rviz/wuta_simulator.rviz
+  wheel_base: 1.53
+  max_steer_angle: 25.0
+  vehicle_dt: 0.02
+  start_x: auto
+  start_y: 0.0
+  start_yaw: 0.0

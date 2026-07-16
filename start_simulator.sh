@@ -5,11 +5,13 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FSD_WS="${ROOT_DIR}/WUTA-FSD/ros2_ws"
 SIM_WS="${ROOT_DIR}/WUTA-SIM"
 FSD_BUILD_SCRIPT="${FSD_WS}/build_ws.sh"
+DEFAULT_CONFIG_FILE="${ROOT_DIR}/config/simulator_defaults.yaml"
 
 CLEAN=0
 SKIP_BUILD=0
 BUILD_ONLY=0
 LAUNCH_ARGS=()
+CONFIG_FILE="${DEFAULT_CONFIG_FILE}"
 
 usage() {
   cat <<'EOF'
@@ -22,6 +24,7 @@ Options:
   --skip-build  Skip all builds and use the existing install spaces.
   --build-only  Build both workspaces without starting ROS nodes.
   --rviz        Start RViz2 with the default simulator visualization config.
+  --config PATH Load build and launch defaults from a YAML config file.
   -h, --help    Show this help.
 
 Examples:
@@ -29,9 +32,121 @@ Examples:
   ./start_simulator.sh --rviz
   ./start_simulator.sh launch_fsd:=false
   ./start_simulator.sh track_file:=skidpad mission_mode:=skidpad
+  ./start_simulator.sh --config config/simulator_defaults.yaml --rviz
   ./start_simulator.sh --clean --build-only
 EOF
 }
+
+set_launch_arg() {
+  local argument="$1"
+  if [[ "${argument}" != *":="* ]]; then
+    echo "Invalid ROS launch argument: ${argument} (expected name:=value)" >&2
+    exit 2
+  fi
+
+  local name="${argument%%:=*}"
+  local index
+  for index in "${!LAUNCH_ARGS[@]}"; do
+    if [[ "${LAUNCH_ARGS[index]}" == "${name}:="* ]]; then
+      LAUNCH_ARGS[index]="${argument}"
+      return
+    fi
+  done
+  LAUNCH_ARGS+=("${argument}")
+}
+
+# Resolve --config before loading defaults so every later command-line launch
+# argument can override the selected configuration.
+for ((index = 1; index <= $#; ++index)); do
+  case "${!index}" in
+    --config)
+      next_index=$((index + 1))
+      if (( next_index > $# )); then
+        echo "--config requires a YAML file path." >&2
+        exit 2
+      fi
+      CONFIG_FILE="${!next_index}"
+      ;;
+    --config=*)
+      CONFIG_FILE="${!index#--config=}"
+      ;;
+  esac
+done
+
+if [[ ! -f "${CONFIG_FILE}" ]]; then
+  echo "Simulator defaults config not found: ${CONFIG_FILE}" >&2
+  exit 1
+fi
+
+CONFIG_ENTRIES="$(python3 -c '
+import re
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as stream:
+    lines = list(stream)
+
+section = None
+found_sections = set()
+for number, raw in enumerate(lines, start=1):
+    line = raw.rstrip()
+    stripped = line.strip()
+    if not stripped or stripped.startswith("#"):
+        continue
+    section_match = re.fullmatch(r"(build|launch_arguments):\s*(?:#.*)?", stripped)
+    if section_match:
+        section = section_match.group(1)
+        found_sections.add(section)
+        continue
+    item_match = re.fullmatch(r"  ([A-Za-z_][A-Za-z0-9_]*):\s*(.*?)\s*(?:#.*)?", line)
+    if section is None or not item_match:
+        raise ValueError(f"unsupported YAML at line {number}")
+    name, value = item_match.groups()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in ("\"", chr(39)):
+        value = value[1:-1]
+    if not value:
+        raise ValueError(f"empty value at line {number}")
+    if value.lower() in {"true", "false"}:
+        value = value.lower()
+    if section == "build":
+        print(f"build.{name}={value}")
+    else:
+        print(f"launch={name}:={value}")
+
+if found_sections != {"build", "launch_arguments"}:
+    raise ValueError("config requires build and launch_arguments sections")
+' "${CONFIG_FILE}")" || {
+  echo "Unable to parse simulator defaults config: ${CONFIG_FILE}" >&2
+  exit 1
+}
+
+while IFS= read -r entry; do
+  case "${entry}" in
+    build.clean=*) CLEAN="${entry#*=}" ;;
+    build.skip_build=*) SKIP_BUILD="${entry#*=}" ;;
+    build.build_only=*) BUILD_ONLY="${entry#*=}" ;;
+    launch=*)
+      argument="${entry#launch=}"
+      if [[ "${argument}" == rviz_config:=* && "${argument#rviz_config:=}" != /* ]]; then
+        argument="rviz_config:=${ROOT_DIR}/${argument#rviz_config:=}"
+      fi
+      set_launch_arg "${argument}"
+      ;;
+    *)
+      echo "Unsupported config key: ${entry%%=*}" >&2
+      exit 1
+      ;;
+  esac
+done <<< "${CONFIG_ENTRIES}"
+
+for variable in CLEAN SKIP_BUILD BUILD_ONLY; do
+  if [[ "${!variable}" != "0" && "${!variable}" != "1" &&
+        "${!variable}" != "true" && "${!variable}" != "false" ]]; then
+    echo "${variable} must be true/false in ${CONFIG_FILE}" >&2
+    exit 1
+  fi
+  [[ "${!variable}" == "true" ]] && printf -v "${variable}" '%s' 1
+  [[ "${!variable}" == "false" ]] && printf -v "${variable}" '%s' 0
+done
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -48,7 +163,13 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     --rviz)
-      LAUNCH_ARGS+=("launch_rviz:=true")
+      set_launch_arg "launch_rviz:=true"
+      shift
+      ;;
+    --config)
+      shift 2
+      ;;
+    --config=*)
       shift
       ;;
     -h|--help)
@@ -57,11 +178,13 @@ while [[ $# -gt 0 ]]; do
       ;;
     --)
       shift
-      LAUNCH_ARGS+=("$@")
+      for argument in "$@"; do
+        set_launch_arg "${argument}"
+      done
       break
       ;;
     *)
-      LAUNCH_ARGS+=("$1")
+      set_launch_arg "$1"
       shift
       ;;
   esac

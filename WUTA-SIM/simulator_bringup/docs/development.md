@@ -76,12 +76,21 @@ git submodule update --init --recursive
 并发布 `/odometry/filtered`，localization_manager 最终发布 `/localization/pose`。
 
 TF 所有权固定为：bringup 发布静态同原点 `map -> odom` 与 `base_link -> lidar`，EKF 发布唯一
-动态 `odom -> base_link`，KISS 不发布 TF。需要真值回退时，设置
-`use_ground_truth_localization:=true`，启动文件会自动关闭 INS 与融合定位：
+动态 `odom -> base_link`，KISS 不发布 TF。需要在不接入 INS、KISS-ICP 与 EKF 的情况下进行
+真值回退时，只需设置 `use_ground_truth_localization:=true`；启动文件会自动关闭 INS 与融合定位：
 
 ```bash
 ros2 launch simulator_bringup simulator.launch.py \
   use_ground_truth_localization:=true
+```
+
+不要单独设置 `launch_ins:=false`：此时 EKF 仍会启动却没有 INS 输入。也不要单独设置
+`launch_localization:=false` 后启动 FSD：控制器将得不到 `/localization/pose`。若只需查看
+传感器和 RViz，可使用：
+
+```bash
+./start_simulator.sh --skip-build --rviz \
+  launch_fsd:=false use_ground_truth_localization:=true
 ```
 
 ## 配置检查
